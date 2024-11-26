@@ -4,9 +4,6 @@ parts:
   - caption: Getting Started
     chapters:
     - file: setup
-      sections:
-      - file: vscode-setup
-      - file: rstudio-setup
     - file: build-deploy
     
   - caption: Formatting
