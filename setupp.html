@@ -60,11 +60,11 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'setup';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'setupp';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Setup" href="setupp.html" />
-    <link rel="prev" title="CBW’s Jupyter Book Documentation" href="intro.html" />
+    <link rel="next" title="Building and Deploying" href="build-deploy.html" />
+    <link rel="prev" title="Setup" href="setup.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -170,8 +170,8 @@
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="setupp.html">Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="build-deploy.html">Building and Deploying</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Formatting</span></p>
@@ -258,7 +258,7 @@
       
       
       
-      <li><a href="https://github.com/cbw-dev/jupyterbook-docs/issues/new?title=Issue%20on%20page%20%2Fsetup.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/cbw-dev/jupyterbook-docs/issues/new?title=Issue%20on%20page%20%2Fsetupp.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -288,7 +288,7 @@
       
       
       
-      <li><a href="_sources/setup.md" target="_blank"
+      <li><a href="_sources/setupp.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -298,7 +298,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -375,7 +375,6 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-setup">Python Setup</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-book-setup">Jupyter book setup</a></li>
 </ul>
             </nav>
         </div>
@@ -393,23 +392,27 @@
 <section id="python-setup">
 <h2>Python Setup<a class="headerlink" href="#python-setup" title="Link to this heading">#</a></h2>
 <p>Install python here.</p>
-<p>Check that python was correctly installed by running the following in terminal (MacOS) or Command Prompt/Powershell (Windows).</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">--</span><span class="n">version</span>
+<p>Check that python was correctly installed by running the following in terminal.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>python3<span class="w"> </span>--version
+<span class="o">!</span>pip3<span class="w"> </span>--version
 </pre></div>
 </div>
-<p>The output should look like:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Python</span> <span class="mf">3.13.0</span>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Python 3.13.0
 </pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pip 24.3.1 from /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pip (python 3.13)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="warning admonition">
 <p class="admonition-title">command not found: python</p>
-<p>You might be running a very recent version of python. [ADD MORE DETAILS]</p>
-<p>Try running <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">--version</span></code> instead and you should get the above output.</p>
+<p>You might be running a very recent version of python.</p>
 </div>
-<p>Jupyter Book specifically requires pip, the package installer for Python, which will install the Jupyter Book package. Check that you have pip installed by running the following command.</p>
-</section>
-<section id="jupyter-book-setup">
-<h2>Jupyter book setup<a class="headerlink" href="#jupyter-book-setup" title="Link to this heading">#</a></h2>
 </section>
 </section>
 
@@ -444,20 +447,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="intro.html"
+       href="setup.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">CBW’s Jupyter Book Documentation</p>
+        <p class="prev-next-title">Setup</p>
       </div>
     </a>
     <a class="right-next"
-       href="setupp.html"
+       href="build-deploy.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Setup</p>
+        <p class="prev-next-title">Building and Deploying</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -479,7 +482,6 @@
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-setup">Python Setup</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-book-setup">Jupyter book setup</a></li>
 </ul>
   </nav></div>
 
