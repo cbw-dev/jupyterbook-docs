@@ -18,6 +18,7 @@ parts:
     chapters:
     - file: edit/formatting
     - file: edit/markdown
+    - file: edit/cheat-sheet
 
   - caption: Code Customizations
     chapters:

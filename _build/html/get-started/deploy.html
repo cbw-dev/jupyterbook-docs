@@ -65,7 +65,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Formatting" href="../edit/formatting.html" />
-    <link rel="prev" title="Git Commands Reference Sheet" href="git/git-commands.html" />
+    <link rel="prev" title="Git Commands" href="git/git-commands.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -178,7 +178,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="git/git-setup.html">Git Setup</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="git/ssh-connection.html">Setting Up Your SSH Connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git/git-clone.html">Git Clone!</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git/git-commands.html">Git Commands Reference Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git/git-commands.html">Git Commands</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">How to Deploy Your Website</a></li>
@@ -187,6 +187,7 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../edit/formatting.html">Formatting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../edit/markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../edit/cheat-sheet.html">JB Commands Cheat Sheet</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Code Customizations</span></p>
 <ul class="nav bd-sidenav">
@@ -383,7 +384,12 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workshop-repo-vs-workshop-website">Workshop Repo VS Workshop Website</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wait-let-s-recap">Wait, Let’s Recap</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-preview-your-website">How to Preview Your Website</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-pages-and-gh-pages">GitHub Pages and gh-pages</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#workshop-repo-vs-workshop-website">Workshop Repo VS Workshop Website</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-your-deploy-and-see-your-website-check-deploy">Check Your Deploy and See your Website! {#check-deploy}</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-very-specific-build-and-deployment-warning">A Very Specific Build and Deployment Warning {-}</a></li>
 </ul>
@@ -401,11 +407,44 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="how-to-deploy-your-website">
 <span id="deploy"></span><h1>How to Deploy Your Website<a class="headerlink" href="#how-to-deploy-your-website" title="Link to this heading">#</a></h1>
+<section id="wait-let-s-recap">
+<h2>Wait, Let’s Recap<a class="headerlink" href="#wait-let-s-recap" title="Link to this heading">#</a></h2>
+<p>You currently have all the files we need to build and develop your website (all included in the basic workshop template), locally on your own laptop (since we <a class="reference internal" href="git/git-clone.html#git-clone"><span class="std std-ref">git cloned</span></a>!). Since you know how to <a class="reference internal" href="git/git-commands.html#git-commands"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code></span></a>, we can update our GitHub repository to hold edits to our workshop.</p>
+<p>Our template is even ready to preview! Let’s look at how your website would look, using our local files.</p>
+<!-- Hmmm, maybe this should be a separate section -->
+</section>
+<section id="how-to-preview-your-website">
+<h2>How to Preview Your Website<a class="headerlink" href="#how-to-preview-your-website" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>Navigate to the folder <strong>containing</strong> your project folder (the folder that you git cloned) in Terminal.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Alternatively, …</p>
+<p>Navigate to your project folder in Terminal. Then, run <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">..</span></code> in terminal. Now you are in the folder <strong>containing</strong> your project folder (the parent folder)!</p>
+</div>
+</li>
+<li><p>Run the following command:</p>
+<div class="warning dropdown admonition">
+<p class="admonition-title">CHANGE “workshop-name” TO YOUR WORKSHOP NAME</p>
+<p>For example, if my workshop is called AUR_2024, I would run <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">--all</span> <span class="pre">AUR_2024</span></code></p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">build</span> <span class="o">--</span><span class="nb">all</span> <span class="n">workshop</span><span class="o">-</span><span class="n">name</span>
+</pre></div>
+</div>
+<p>You can also use the shortened verison of “jupyter-book” and run the following command instead!</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jb</span> <span class="n">build</span> <span class="o">--</span><span class="nb">all</span> <span class="n">workshop</span><span class="o">-</span><span class="n">name</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>When you are continuously previewing your workshop, you will be continuously running this command in terminal. Recall that hitting the [↑] arrow key reenters your previous command, so it’s ready for you to run!</p>
+</div>
+</li>
+</ol>
+</section>
+<section id="github-pages-and-gh-pages">
+<h2>GitHub Pages and gh-pages<a class="headerlink" href="#github-pages-and-gh-pages" title="Link to this heading">#</a></h2>
 <section id="workshop-repo-vs-workshop-website">
-<h2>Workshop Repo VS Workshop Website<a class="headerlink" href="#workshop-repo-vs-workshop-website" title="Link to this heading">#</a></h2>
-<p>EXPLAIN GHP PAGES INSTEAD</p>
-<p>Let’s recap.</p>
-<p>You currently have all the files we need to build and develop your website (all included in the basic workshop template), locally on your own laptop. You want to make changes to these files, so that you can add content for your workshop! We make these changes locally. We also “build” (convert our files into HTML pages) locally. Yet we</p>
+<h3>Workshop Repo VS Workshop Website<a class="headerlink" href="#workshop-repo-vs-workshop-website" title="Link to this heading">#</a></h3>
 <p>Now, you have made a repository that holds what GitHub needs to make our website (the basic workshop template). Essentially, the template has already been configured so that the html files that make up our website go into a folder called <code class="docutils literal notranslate"><span class="pre">docs</span></code>. We need to tell GitHub to look at the <code class="docutils literal notranslate"><span class="pre">docs</span></code> folder to find our website files and make it available to see online (a.k.a deploy it). This is what we mean when we say CBW uses GitHub pages to deploy our website.</p>
 <div class="admonition-distinction admonition">
 <p class="admonition-title">Distinction</p>
@@ -423,6 +462,7 @@
 <p>Great! Now we’re waiting on the page to build and deploy, which should take less than a minute.</p>
 </li>
 </ol>
+</section>
 </section>
 <section id="check-your-deploy-and-see-your-website-check-deploy">
 <h2>Check Your Deploy and See your Website! {#check-deploy}<a class="headerlink" href="#check-your-deploy-and-see-your-website-check-deploy" title="Link to this heading">#</a></h2>
@@ -482,7 +522,7 @@ A **successful deploy** will have a green checkmark next to it. You can inspect 
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Git Commands Reference Sheet</p>
+        <p class="prev-next-title">Git Commands</p>
       </div>
     </a>
     <a class="right-next"
@@ -511,7 +551,12 @@ A **successful deploy** will have a green checkmark next to it. You can inspect 
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workshop-repo-vs-workshop-website">Workshop Repo VS Workshop Website</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wait-let-s-recap">Wait, Let’s Recap</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-preview-your-website">How to Preview Your Website</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-pages-and-gh-pages">GitHub Pages and gh-pages</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#workshop-repo-vs-workshop-website">Workshop Repo VS Workshop Website</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-your-deploy-and-see-your-website-check-deploy">Check Your Deploy and See your Website! {#check-deploy}</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-very-specific-build-and-deployment-warning">A Very Specific Build and Deployment Warning {-}</a></li>
 </ul>

@@ -11,18 +11,25 @@ Now that we *can* get updates from our online repository (on GitHub!), let's cop
     
     In Finder (macOS)/File Explorer (Windows):
     - Navigate to 'Documents'
-    - Create a folder and name it "CBWGithub" 
-    
+    - Create a folder and name it "CBWGithub"
+
     <br>
     **Copy the file address of the CBWGithub folder:**
+    
     - On **Windows**
+
       - Using File Explorer, find your "CBWGithub" folder.
+
       - Right click the "CBWGithub" folder and press "*Copy as path*".
+
         - If you are currently inside the "CBWGithub" folder, you can right click on it's name in the header and press either "*Copy Address*" or "*Copy Address as Text*"
     
     - On **Mac**
+      
       - Go to the folder holding your "CBWGithub" folder (recommended to be your Documents folder)
+      
       - Right-click (or tap your mouse pad with 2 fingers) the "CBWGithub" folder and press the "Options" keyboard key (in the bottom left).
+      
       - While holding the "Options" key, go the the 4th section from the top, and click "Copy \"CBWGithub\" as Pathname".
     
     > You may want to paste your file address somewhere where you can quickly find it, so it is easier to navigate to in the future.
@@ -53,11 +60,9 @@ Now that we *can* get updates from our online repository (on GitHub!), let's cop
     ```{warning}
     **EDIT THE FOLLOWING COMMAND!**
     
-    You can essentially type "git clone " and then paste the SSH url, and then hit enter. Below, you must delete the entire "<span>git@</span>github.com:bioinformaticsdotca/[YOUR WORKSHOP NAME].git" text, and replace it with the text you copied.
+    You can essentially type "git clone " and then paste the SSH url, and then hit enter. Below, you must delete the entire `git@github.com:bioinformaticsdotca/[YOUR WORKSHOP NAME].git` text, and replace it with the text you copied.
     ```
-    
-    <!-- The <span></span> html code is to stop git@github.com from turning into a link -->
-    
+        
     ```
     git clone git@github.com:bioinformaticsdotca/[YOUR WORKSHOP NAME].git
     ```
@@ -70,9 +75,13 @@ Now that we *can* get updates from our online repository (on GitHub!), let's cop
 Consider having only one team member (or perhaps your RC) make git pushes or control pull requests. To avoid merge conflicts, designate 1 team member to control actual changes to your workshop repo. Other team members can fork or create branches, and create a pull request that the designated team member can check and overlook.
 ```
 
-But what do any of these files mean? Which ones do I edit? Which ones shouldn't I edit? How do I open this in RStudio? And how exactly is a page made from all these files??? It's time for you to go to the next page :D
+Now that we have our workshop website's files locally, we finally have what we need to deploy our website, and make it live! Next step: [](deploy)
 
-### Oops, I Git Cloned the Wrong Repository and I Want to Delete it from my Local Computer! {#delete-git-folder-locally}
+```{tip}
+Consider checking out [](git-commands) for an explanation on how to update your GitHub repository using git commands in Terminal.
+
+(delete-git-folder-locally)=
+### Oops, I Git Cloned the Wrong Repository and I Want to Delete it from my Local Computer!
 
 That's ok! To delete the entire local repository and the folder itself, run the following command:
 
