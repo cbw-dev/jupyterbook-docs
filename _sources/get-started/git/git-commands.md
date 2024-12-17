@@ -2,12 +2,11 @@
 
 git pull
 
-git add -u
+git add -A
 
 git commit -m "clear and concise summary of actions"
 
 git push
-
 
 
 ## Non-Git Commands You Will Be Using a Lot
