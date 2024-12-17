@@ -397,14 +397,13 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="git-clone">
 <span id="id1"></span><h1>Git Clone!<a class="headerlink" href="#git-clone" title="Link to this heading">#</a></h1>
-<!-- explain -->
-<p>Getting the Template on Your Local Computer</p>
+<p>Now that we <em>can</em> get updates from our online repository (on GitHub!), let’s copy it into locally, so that we can edit locally. That is, we will be <strong>git cloning</strong> the template onto our local computer.</p>
 <ol class="arabic">
 <li><p>Navigate to where in your local file system you want to have your workshop in Terminal/Windows PowerShell/Command Prompt.</p>
-<div class="{.bluebox docutils">
-<p><strong>Recommended Workshop Location:</strong></p>
+<div class="admonition-recommended-workshop-location admonition">
+<p class="admonition-title"><strong>Recommended Workshop Location:</strong></p>
 <p>CBW recommends that you create a folder within your Documents folder called “CBWGitHub”, which is where you will place your CBW workshop project files.</p>
-<p>In Finder/File Explorer:</p>
+<p>In Finder (macOS)/File Explorer (Windows):</p>
 <ul class="simple">
 <li><p>Navigate to ‘Documents’</p></li>
 <li><p>Create a folder and name it “CBWGithub”</p></li>
@@ -428,43 +427,37 @@
 <div><p>You may want to paste your file address somewhere where you can quickly find it, so it is easier to navigate to in the future.</p>
 </div></blockquote>
 </div>
-  <p style="font-size: 8px;"></p>
-<div class="{.greenbox docutils">
-<div class="{.center docutils">
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <p><strong>Navigate to your workshop folder in Terminal:</strong></p>
-</div>
 <p>Navigate using the “cd” command. For example, if you used the recommended instructions, you should run “cd” and paste (since you already copied the file address).</p>
 <p>If you didn’t use the recommended path and folder name, you can use “cd + tab” (where tab is the keyboard key, “tab”) to try to find your path and folder.</p>
 </div>
-<br>
 </li>
 <li><p>Return to your workshop repository on GitHub. Press <code class="docutils literal notranslate"><span class="pre">&lt;</span> <span class="pre">&gt;</span> <span class="pre">Code</span></code>, which is the leftmost tab in the header bar on GitHub.</p>
-<p>Find the ssh for your workshop repository:
-a) Click the green button entitled <code class="docutils literal notranslate"><span class="pre">&lt;</span> <span class="pre">&gt;</span> <span class="pre">Code</span></code> ands see the drop down options.</p>
-<p>b) Click the SSH tab, as seen below, and then copy the text below it. The text should be something like <a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>{.email}:bioinformaticsdotca/WORKSHOP-NAME.git, as seen below.
-<img alt="how to find the ssh for your repo" src="get-started/git/img/git-instruct/copy-ssh.png" />\</p>
-<p>c) <strong>Edit</strong> and <strong>run the following command</strong> in Terminal/PowerShell/Command Prompt, within the folder you want the workshop folder to be in. (Recall that we navigated there in step 1.)</p>
-<div class="{.redbox docutils">
-<div class="{.center docutils">
+<br>
+<p>Find the ssh for your workshop repository:</p>
+<p>a. Click the green button entitled <code class="docutils literal notranslate"><span class="pre">&lt;</span> <span class="pre">&gt;</span> <span class="pre">Code</span></code> ands see the drop down options.</p>
+<p>b. Click the SSH tab, as seen below, and then copy the text below it. The text should be something like <a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>:bioinformaticsdotca/WORKSHOP-NAME.git, as seen below.</p>
+<p><img alt="how to find the ssh for your repo" src="../../_images/copy-ssh.png" /></p>
+<p>c. <strong>Edit</strong> and <strong>run the following command</strong> in Terminal/PowerShell/Command Prompt, within the folder you want the workshop folder to be in. (Recall that we navigated there in step 1.)</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p><strong>EDIT THE FOLLOWING COMMAND!</strong></p>
-</div>
 <p>You can essentially type “git clone “ and then paste the SSH url, and then hit enter. Below, you must delete the entire “<span>git&#64;</span><a class="reference external" href="http://github.com">github.com</a>:bioinformaticsdotca/[YOUR WORKSHOP NAME].git” text, and replace it with the text you copied.</p>
 </div>
 <!-- The <span></span> html code is to stop git@github.com from turning into a link -->
-<p style="font-size: 8px;"></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">bioinformaticsdotca</span><span class="o">/</span><span class="p">[</span><span class="n">YOUR</span> <span class="n">WORKSHOP</span> <span class="n">NAME</span><span class="p">]</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
 </div>
 </li>
 <li><p>You should be ready to go! With your given permissions, you should be able to git push (put your local edits on GitHub) and git pull (pull edits on GitHub to your local computer) fine!</p></li>
 </ol>
-<div class="{.bluebox docutils">
-<div class="{.center docutils">
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <p><strong>Git Version Control Tip!</strong></p>
-</div>
 <p>Consider having only one team member (or perhaps your RC) make git pushes or control pull requests. To avoid merge conflicts, designate 1 team member to control actual changes to your workshop repo. Other team members can fork or create branches, and create a pull request that the designated team member can check and overlook.</p>
 </div>
-<br>
 <p>But what do any of these files mean? Which ones do I edit? Which ones shouldn’t I edit? How do I open this in RStudio? And how exactly is a page made from all these files??? It’s time for you to go to the next page :D</p>
 <section id="oops-i-git-cloned-the-wrong-repository-and-i-want-to-delete-it-from-my-local-computer-delete-git-folder-locally">
 <h2>Oops, I Git Cloned the Wrong Repository and I Want to Delete it from my Local Computer! {#delete-git-folder-locally}<a class="headerlink" href="#oops-i-git-cloned-the-wrong-repository-and-i-want-to-delete-it-from-my-local-computer-delete-git-folder-locally" title="Link to this heading">#</a></h2>
