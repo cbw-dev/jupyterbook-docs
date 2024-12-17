@@ -385,14 +385,14 @@
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-the-command-line">Introduction to the Command Line</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#terminal-command-prompt-and-windows-powershell">Terminal, Command Prompt and Windows PowerShell</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-commands-for-us">Common Commands (for us)</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pwd-or-echo-cd-unnumbered">pwd OR echo %cd% {.unnumbered}</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ls-or-dir-unnumbered">ls OR dir {.unnumbered}</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cd-unnumbered">cd {.unnumbered}</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mkdir-unnumbered">mkdir {.unnumbered}</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rmdir-unnumbered">rmdir {.unnumbered}</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rmdir-r-or-rmdir-s-unnumbered">rmdir -r OR rmdir /s {.unnumbered}</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#up-and-down-arrows-unnumbered">Up [⬆] and Down [⬇] Arrows {.unnumbered}</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-commands-for-us">Common Commands (for Us)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pwd-or-echo-cd"><code class="docutils literal notranslate"><span class="pre">pwd</span></code> OR <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">%cd%</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ls-or-dir"><code class="docutils literal notranslate"><span class="pre">ls</span></code> OR <code class="docutils literal notranslate"><span class="pre">dir</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cd"><code class="docutils literal notranslate"><span class="pre">cd</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mkdir"><code class="docutils literal notranslate"><span class="pre">mkdir</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rmdir"><code class="docutils literal notranslate"><span class="pre">rmdir</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rmdir-r-or-rmdir-s"><code class="docutils literal notranslate"><span class="pre">rmdir</span> <span class="pre">-r</span></code> OR <code class="docutils literal notranslate"><span class="pre">rmdir</span> <span class="pre">/s</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#up-and-down-arrows">Up [↑] and Down [↓] Arrows</a></li>
 </ul>
 </li>
 </ul>
@@ -410,37 +410,41 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="command-line-for-newbies">
 <span id="command-line"></span><h1>Command Line for Newbies<a class="headerlink" href="#command-line-for-newbies" title="Link to this heading">#</a></h1>
+<!-- TASK: SETUP BASH KERNEL AND RUN COMMANDS -->
 <section id="introduction-to-the-command-line">
 <h2>Introduction to the Command Line<a class="headerlink" href="#introduction-to-the-command-line" title="Link to this heading">#</a></h2>
 <p>This is for those who have no (or extremely little) experience with the command line.</p>
 <p>Using the command line, you can use text commands to interact with your computer’s operating system. For us, we will be using it to move around our folders and to <a class="reference internal" href="#git-clone"><span class="xref myst">git clone</span></a> our workshop into our computer, so we can work on it using RStudio!</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You should be comfortable navigating through your folders when using the Jupyter Book Template</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>You should be comfortable navigating through your folders when using the Jupyter Book template!</p>
 </div>
 <section id="terminal-command-prompt-and-windows-powershell">
 <h3>Terminal, Command Prompt and Windows PowerShell<a class="headerlink" href="#terminal-command-prompt-and-windows-powershell" title="Link to this heading">#</a></h3>
 <!-- I DO NOT KNOW HOW EXACTLY ACCURATE MY COMMENTS ON "UNIX-BASED" ARE -->
 <p>We can use the command line using certain tools and applications. Terminal is a Unix-based (meaning Linux and macOS computer already have it) application that allows you to access the command line. Similarly, Command Prompt (CMD) and Windows PowerShell give access to the command line on Windows computers. However, Terminal, Command Prompt and Windows PowerShell differ in what commands are accepted. The same commands we give to Terminal may not work in Command Prompt and/or Windows PowerShell.</p>
 <blockquote>
-<div><p>Note: Windows PowerShell tends to be more advanced than Command Prompt, and often can accept more commands that are accepted by Terminal than Command Prompt.</p>
+<div><p><strong>Command Prompt VS Windows PowerShell</strong>: Windows PowerShell tends to be more advanced than Command Prompt, and often can accept more commands that are accepted by Terminal than Command Prompt.</p>
 </div></blockquote>
 </section>
 <section id="common-commands-for-us">
-<h3>Common Commands (for us)<a class="headerlink" href="#common-commands-for-us" title="Link to this heading">#</a></h3>
+<h3>Common Commands (for Us)<a class="headerlink" href="#common-commands-for-us" title="Link to this heading">#</a></h3>
 <!-- Consider making this explanation a video -->
 <p>We won’t need to know that many commands, but for easy navigation and understanding, here is what you (generally) need:</p>
-<div class="{.greenbox docutils">
-<p><strong>Note:</strong></p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
 <p>Commands are written below as headers, with an explanation provided beneath.</p>
 <p>They follow the format: “[Linux Command] OR “[Windows Command]”</p>
 </div>
-<section id="pwd-or-echo-cd-unnumbered">
-<h4>pwd OR echo %cd% {.unnumbered}<a class="headerlink" href="#pwd-or-echo-cd-unnumbered" title="Link to this heading">#</a></h4>
+<section id="pwd-or-echo-cd">
+<h4><code class="docutils literal notranslate"><span class="pre">pwd</span></code> OR <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">%cd%</span></code><a class="headerlink" href="#pwd-or-echo-cd" title="Link to this heading">#</a></h4>
 <p>“pwd” stands for “print working directory”. It is a command that works in <strong>Linux</strong> and <strong>Windows PowerShell</strong>. The equivalent in <strong>Command Prompt</strong> is “echo %cd%”. For example, below our output is where in my folders the current .Rmd file that makes up this website is:</p>
+<div class="highlight-{bash, notranslate"><div class="highlight"><pre><span></span>pwd
+</pre></div>
+</div>
 </section>
-<section id="ls-or-dir-unnumbered">
-<h4>ls OR dir {.unnumbered}<a class="headerlink" href="#ls-or-dir-unnumbered" title="Link to this heading">#</a></h4>
+<section id="ls-or-dir">
+<h4><code class="docutils literal notranslate"><span class="pre">ls</span></code> OR <code class="docutils literal notranslate"><span class="pre">dir</span></code><a class="headerlink" href="#ls-or-dir" title="Link to this heading">#</a></h4>
 <p>“ls” is a command that works in <strong>Linux</strong> and <strong>Windows PowerShell</strong>. It’s short for “list” and outputs all the files and folders in the directory (folder) you are currently in. (Note: this code only shows 4 files to save space!)</p>
 <div class="highlight-{bash, notranslate"><div class="highlight"><pre><span></span>ls
 </pre></div>
@@ -451,29 +455,54 @@
 </div>
 <p>A similar command in <strong>Command Prompt</strong> is <code class="docutils literal notranslate"><span class="pre">dir</span></code> (short for “directory”), which also outputs the files and folders in your current directory (along with timestamps)!</p>
 </section>
-<section id="cd-unnumbered">
-<h4>cd {.unnumbered}<a class="headerlink" href="#cd-unnumbered" title="Link to this heading">#</a></h4>
+<section id="cd">
+<h4><code class="docutils literal notranslate"><span class="pre">cd</span></code><a class="headerlink" href="#cd" title="Link to this heading">#</a></h4>
 <p>“cd” stands for “change directory”. The command produces no output, but it allows you to go to a different directory than the one you’re currently in. For example,</p>
-<blockquote>
-<div><p><strong>Tip</strong>:<br>Typing “cd” and then hitting the <code class="docutils literal notranslate"><span class="pre">tab</span></code> key will give you the available directories you can go to from where you are, or what you have currently typed in. If there is only one option, hitting <code class="docutils literal notranslate"><span class="pre">tab</span></code> will fill in your command with that option. (This works when typing in any file location into your command line, not only using “cd”). On macOS, the terminal will give you a list if there are multiple options. On Windows, both Command Prompt and Windows Powershell will fill in potential options, and you can hit tab multiple times untill you find your desired file destination.</p>
-</div></blockquote>
+<div class="highlight-{bash, notranslate"><div class="highlight"><pre><span></span>pwd # recall: pwd tells us where we currently are
+cd img # img is a folder in bookdown-docs
+echo &quot;now switching directories&quot; # outputs the following string
+pwd
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Typing “cd” and then hitting the <code class="docutils literal notranslate"><span class="pre">tab</span></code> key will give you the available directories you can go to from where you are, or what you have currently typed in. If there is only one option, hitting <code class="docutils literal notranslate"><span class="pre">tab</span></code> will fill in your command with that option. (This works when typing in any file location into your command line, not only using “cd”). On macOS, the terminal will give you a list if there are multiple options. On Windows, both Command Prompt and Windows Powershell will fill in potential options, and you can hit tab multiple times untill you find your desired file destination.</p>
+</div>
 <p><strong>File Location Shorthands</strong> When referring to file addresses, there are helpful shorthands! Here’s a summary: - <code class="docutils literal notranslate"><span class="pre">.</span></code> = Current Directory - <code class="docutils literal notranslate"><span class="pre">..</span></code> = Parent Directory - <code class="docutils literal notranslate"><span class="pre">~</span></code> = Home Directory</p>
 <p>Here’s an example (recall, cd produces no output!):</p>
+<div class="highlight-{bash, notranslate"><div class="highlight"><pre><span></span>pwd
+echo -e # creates a line
+
+echo &quot;Current Directory Example&quot;
+cd .
+pwd
+echo -e
+
+echo &quot;Parent Directory Example&quot;
+cd ..
+pwd
+echo -e
+
+echo &quot;Home Directory Example&quot;
+cd ~
+pwd
+</pre></div>
+</div>
 </section>
-<section id="mkdir-unnumbered">
-<h4>mkdir {.unnumbered}<a class="headerlink" href="#mkdir-unnumbered" title="Link to this heading">#</a></h4>
+<section id="mkdir">
+<h4><code class="docutils literal notranslate"><span class="pre">mkdir</span></code><a class="headerlink" href="#mkdir" title="Link to this heading">#</a></h4>
 <p>“mkdir [directory address]” stands for “make directory”. Essentially, mkdir will make an empty directory (folder) at a specified location. For example: <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">test</span></code> would create a folder named “test” in our current directory. The following commands do the same thing. Note: <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">./test</span></code> does the same thing.</p>
 </section>
-<section id="rmdir-unnumbered">
-<h4>rmdir {.unnumbered}<a class="headerlink" href="#rmdir-unnumbered" title="Link to this heading">#</a></h4>
+<section id="rmdir">
+<h4><code class="docutils literal notranslate"><span class="pre">rmdir</span></code><a class="headerlink" href="#rmdir" title="Link to this heading">#</a></h4>
 <p>“rmdir [directory address]” removes an <em>empty</em> directory. For example, <code class="docutils literal notranslate"><span class="pre">rmdir</span> <span class="pre">test</span></code> would delete the directory we just made!</p>
 </section>
-<section id="rmdir-r-or-rmdir-s-unnumbered">
-<h4>rmdir -r OR rmdir /s {.unnumbered}<a class="headerlink" href="#rmdir-r-or-rmdir-s-unnumbered" title="Link to this heading">#</a></h4>
+<section id="rmdir-r-or-rmdir-s">
+<h4><code class="docutils literal notranslate"><span class="pre">rmdir</span> <span class="pre">-r</span></code> OR <code class="docutils literal notranslate"><span class="pre">rmdir</span> <span class="pre">/s</span></code><a class="headerlink" href="#rmdir-r-or-rmdir-s" title="Link to this heading">#</a></h4>
 <p>“rmdir -r [directory address]” (Terminal &amp; Windows PowerShell) and “rmdir /s [directory address]” removes a directory recursively, meaning it deletes all the contents of the folder as we all as the folder in itself. Be careful, you can not restore a directory you removed using “rmdir”!</p>
 </section>
-<section id="up-and-down-arrows-unnumbered">
-<h4>Up [⬆] and Down [⬇] Arrows {.unnumbered}<a class="headerlink" href="#up-and-down-arrows-unnumbered" title="Link to this heading">#</a></h4>
+<section id="up-and-down-arrows">
+<h4>Up [↑] and Down [↓] Arrows<a class="headerlink" href="#up-and-down-arrows" title="Link to this heading">#</a></h4>
 <p>One of the most useful tips for using the command line is to use your up [↑] and down [↓] arrow keys. Using the up [↑] key gives you the previous commands you typed, and the down [↓] arrow returns you to your earlier commands.</p>
 </section>
 </section>
@@ -547,14 +576,14 @@
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-the-command-line">Introduction to the Command Line</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#terminal-command-prompt-and-windows-powershell">Terminal, Command Prompt and Windows PowerShell</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-commands-for-us">Common Commands (for us)</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pwd-or-echo-cd-unnumbered">pwd OR echo %cd% {.unnumbered}</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ls-or-dir-unnumbered">ls OR dir {.unnumbered}</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cd-unnumbered">cd {.unnumbered}</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mkdir-unnumbered">mkdir {.unnumbered}</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rmdir-unnumbered">rmdir {.unnumbered}</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rmdir-r-or-rmdir-s-unnumbered">rmdir -r OR rmdir /s {.unnumbered}</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#up-and-down-arrows-unnumbered">Up [⬆] and Down [⬇] Arrows {.unnumbered}</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-commands-for-us">Common Commands (for Us)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pwd-or-echo-cd"><code class="docutils literal notranslate"><span class="pre">pwd</span></code> OR <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">%cd%</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ls-or-dir"><code class="docutils literal notranslate"><span class="pre">ls</span></code> OR <code class="docutils literal notranslate"><span class="pre">dir</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cd"><code class="docutils literal notranslate"><span class="pre">cd</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mkdir"><code class="docutils literal notranslate"><span class="pre">mkdir</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rmdir"><code class="docutils literal notranslate"><span class="pre">rmdir</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rmdir-r-or-rmdir-s"><code class="docutils literal notranslate"><span class="pre">rmdir</span> <span class="pre">-r</span></code> OR <code class="docutils literal notranslate"><span class="pre">rmdir</span> <span class="pre">/s</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#up-and-down-arrows">Up [↑] and Down [↓] Arrows</a></li>
 </ul>
 </li>
 </ul>
