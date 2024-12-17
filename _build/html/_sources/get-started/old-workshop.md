@@ -6,6 +6,9 @@ Certain aspects of the setup for workshops will be different depending on your r
 You should be on this page if CBW already has a version of this workshop as a website, and you mainly wanted to reuse it (maybe with some edits).
 ```
 
+## WE NEED TO TEST THIS SINCE IT USES GHP PAGES
+
+
 ## Recreate the Workshop
 
 We will be creating a copy the existing workshop and workshop website by git forking the repository that hosts the existing workshop website. (This is explained more thoroughly as you actually create your website!)
@@ -16,16 +19,22 @@ We will be creating a copy the existing workshop and workshop website by git for
    
    <img src="https://docs.google.com/drawings/d/e/2PACX-1vR6kuw0wnLD1WL01iuZfnP3rPrDVhB-oClsjUribaDS7GpJNXw9QXbUVZ3aBCIO5N4pBKJXGtwpScfV/pub?w=2068&amp;h=597" alt="Analysis Using R 2024 GitHub Repo Screenshot">
 
+<br>
+
 2. **Click "Fork"** as shown below.
      <img src="https://docs.google.com/drawings/d/e/2PACX-1vQKy0kL2lRkDMug28L6zdgEw_WmUIDGhUi5vor_N5SpLyUMFvtSwTnoHpmefZChkSbEQhEcYHHNFy2Z/pub?w=2867&amp;h=997" alt="Where to find the fork button on a GitHub Repo">
-     
+
+<br>
+
 3. You will be brought to this page. You need to **update** the following parts: the **owner** (change to bioinformaticsdotca, as shown), the **new repository name** (follow CBW Guidelines) and the **description**. The fork will automatically have "Copy the `main` branch only", which it should be (do not deselect this). Then, click the green `fork` button in the bottom right, as highlighted below.
 
     <img src="https://docs.google.com/drawings/d/e/2PACX-1vQGQ5pL3qc29i5p5m_aQmyH4YOFUCMVvfryHx3kpR8d-AviF0BKDdCd40GJSM4qc8N2P42TNMp2UIkD/pub?w=2864&amp;h=1624" alt="fork page, with edits highlighted">
 
+<br>
+
 4. You will be brought to your new repository, which will host the updated version of the pre-existing workshop!
 
-Now it's time to generate a website from your newly forked repository!
+Now it's time to generate a website from your newly forked repository! That is, deploy your website. Click [here](deploy)!
 
 ## Making Updates
 

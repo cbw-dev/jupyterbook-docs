@@ -174,8 +174,12 @@
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installations</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>New Workshop</strong>: Creation [RC]</a></li>
 <li class="toctree-l1"><a class="reference internal" href="old-workshop.html"><strong>Recurring Workshop</strong>: Copying [RC]</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="git/git-setup.html">Git Setup</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="git/ssh-connection.html">Setting Up Your SSH Connection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git/git-clone.html">Git Clone!</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="deploy.html">How to Deploy Your Website</a></li>
-<li class="toctree-l1"><a class="reference internal" href="git-setup.html">Command Line, SSH Connection &amp; Git Clone</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Editing Your Workshop</span></p>
 <ul class="nav bd-sidenav">
@@ -354,7 +358,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -370,6 +376,15 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-the-workshop-rc">Setup the Workshop [RC]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-team-access-rc-nia-will-fill-this-in">Setting Up Team Access [RC?] (Nia will fill this in)</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -382,6 +397,34 @@
   <section class="tex2jax_ignore mathjax_ignore" id="new-workshop-creation-rc">
 <h1><strong>New Workshop</strong>: Creation [RC]<a class="headerlink" href="#new-workshop-creation-rc" title="Link to this heading">#</a></h1>
 <p>Certain aspects of the setup for workshops will be different depending on your role. Headers ending in “[RC]” are for Regional Coordinators. Headers without “[RC]” are assumed to be relevant to both RC and workshop teams.</p>
+<section id="setup-the-workshop-rc">
+<h2>Setup the Workshop [RC]<a class="headerlink" href="#setup-the-workshop-rc" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>First, let’s <strong>go to the <a href="https://github.com/cbw-dev/jupyterbook-template" target="_blank">Jupyter Book template</a></strong>.
+<br>
+<br></p></li>
+<li><p><strong>Click on the “Use this template”</strong> green button, which is to the right of the title of the repository “jupyterbook-template”. Then, press the dropdown option: “<strong>Create a new repository</strong>”, as seen below.</p>
+<p><img alt="Image of the repo and how to find make a template" src="../_images/make-a-template.png" />
+<br> <!-- enforces a space after the image --></p>
+</li>
+</ol>
+<br>
+<br>
+<!-- MUST ADD A LINK TO THE CBW GUIDELINES FOR NAMING -->
+<ol class="arabic" start="3">
+<li><p>You will be brought to a “Create a new repository” page. Fill out the blanks as seen below. That is, <strong>change the owner to “bioinformaticsdotca”</strong>, make it <strong>public</strong>, fill in the <strong>repository name and description</strong> according to <a class="reference internal" href="#"><span class="xref myst">CBW Guidelines</span></a>. <br>”Include all branches” does not need to be selected.</p>
+<p><img alt="Image showing how to make a new repo from a template repo" src="../_images/make-new-repo.png" />
+<br></p>
+<p>This may take a couple seconds to generate. After it loads, you will be brought to a new repository for the new workshop!</p>
+</li>
+</ol>
+<br>
+<br>
+<p>Our next step is to turn these files in your repository into a website. First, we need to get these files locally, setup a git connection, and deploy using ghp-pages! (We will explain what these actions do!)</p>
+</section>
+<section id="setting-up-team-access-rc-nia-will-fill-this-in">
+<h2>Setting Up Team Access [RC?] (Nia will fill this in)<a class="headerlink" href="#setting-up-team-access-rc-nia-will-fill-this-in" title="Link to this heading">#</a></h2>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -438,6 +481,23 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-the-workshop-rc">Setup the Workshop [RC]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-team-access-rc-nia-will-fill-this-in">Setting Up Team Access [RC?] (Nia will fill this in)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

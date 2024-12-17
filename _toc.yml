@@ -6,8 +6,12 @@ parts:
     - file: get-started/install
     - file: get-started/new-workshop
     - file: get-started/old-workshop
+    - file: get-started/git/git-setup
+      sections:
+      - file: get-started/git/ssh-connection
+      - file: get-started/git/ssh-intruct
+      - file: get-started/git/git-clone
     - file: get-started/deploy
-    - file: get-started/git-setup
     
   - caption: Editing Your Workshop
     chapters:

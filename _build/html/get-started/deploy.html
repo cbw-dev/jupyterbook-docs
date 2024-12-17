@@ -64,8 +64,8 @@
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Command Line, SSH Connection &amp; Git Clone" href="git-setup.html" />
-    <link rel="prev" title="Recurring Workshop: Copying [RC]" href="old-workshop.html" />
+    <link rel="next" title="Formatting" href="../edit/formatting.html" />
+    <link rel="prev" title="Git Clone!" href="git/git-clone.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -174,8 +174,12 @@
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="new-workshop.html"><strong>New Workshop</strong>: Creation [RC]</a></li>
 <li class="toctree-l1"><a class="reference internal" href="old-workshop.html"><strong>Recurring Workshop</strong>: Copying [RC]</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="git/git-setup.html">Git Setup</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="git/ssh-connection.html">Setting Up Your SSH Connection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git/git-clone.html">Git Clone!</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">How to Deploy Your Website</a></li>
-<li class="toctree-l1"><a class="reference internal" href="git-setup.html">Command Line, SSH Connection &amp; Git Clone</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Editing Your Workshop</span></p>
 <ul class="nav bd-sidenav">
@@ -354,7 +358,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -370,6 +376,18 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workshop-repo-vs-workshop-website">Workshop Repo VS Workshop Website</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-your-deploy-and-see-your-website-check-deploy">Check Your Deploy and See your Website! {#check-deploy}</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-very-specific-build-and-deployment-warning">A Very Specific Build and Deployment Warning {-}</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -380,7 +398,47 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="how-to-deploy-your-website">
-<h1>How to Deploy Your Website<a class="headerlink" href="#how-to-deploy-your-website" title="Link to this heading">#</a></h1>
+<span id="deploy"></span><h1>How to Deploy Your Website<a class="headerlink" href="#how-to-deploy-your-website" title="Link to this heading">#</a></h1>
+<section id="workshop-repo-vs-workshop-website">
+<h2>Workshop Repo VS Workshop Website<a class="headerlink" href="#workshop-repo-vs-workshop-website" title="Link to this heading">#</a></h2>
+<p>EXPLAIN GHP PAGES</p>
+<div class="admonition-distinction admonition">
+<p class="admonition-title">Distinction</p>
+<p>GitHub (ex. <a class="github reference external" href="https://github.com/cbw-dev/bookdown-template">cbw-dev/bookdown-template</a>) holds your repo, which has version control for all your files! <br> The deployed website (ex. <a class="reference external" href="https://cbw-dev.github.io/bookdown-template/">https://cbw-dev.github.io/bookdown-template/</a>) has the workshop online.</p>
+</div>
+<ol class="arabic">
+<li><p>In the top navigation bar, select <strong>Settings</strong>.
+<img alt="Base repo, pointing at settings" src="../_images/github-settings.png" /></p></li>
+<li><p>Then, go to the <strong>Pages</strong> sidebar option.
+<img alt="Selecting pages from the settings page" src="../_images/github-select-pages.png" /></p></li>
+<li><p>“Deploy from a branch” is already selected, which is what we want. We must <strong>change the branch from “none” to “main”</strong>. Select the “None” dropdown button and select “main”.
+<img alt="Select main as the branc" src="../_images/github-deploy-main.png" /></p></li>
+<li><p>Then, change the folder from <code class="docutils literal notranslate"><span class="pre">/</span> <span class="pre">root</span></code> to <code class="docutils literal notranslate"><span class="pre">/docs</span></code>. Then <strong>press save</strong>.
+<img alt="Select /docs as the branch" src="../_images/github-deploy-docs.png" /></p>
+<p>Great! Now we’re waiting on the page to build and deploy, which should take less than a minute.</p>
+</li>
+</ol>
+</section>
+<section id="check-your-deploy-and-see-your-website-check-deploy">
+<h2>Check Your Deploy and See your Website! {#check-deploy}<a class="headerlink" href="#check-your-deploy-and-see-your-website-check-deploy" title="Link to this heading">#</a></h2>
+<p>To see updates, go to the <strong>Actions</strong> page (found along the top navigation bar. This will help you understand how the deploy is working, and if it succeeded or failed.</p>
+<p><img alt="Image showing the different possibilities of deploy a github page" src="../_images/github-pages-actions-explained.png" />\</p>
+<p>You can click <u><strong>pages build and deployment</strong></u> for updates.</p>
+<p><img alt="where to click for pages build and deployment information" src="../_images/pages-build-and-deployment.png" /></p>
+<br>
+A **successful deploy** will have a green checkmark next to it. You can inspect the 3 steps: build, report-build-status, deploy. Once it's done deploying, **you can find the website at the link provided under the "deploy" step**!
+<p><img alt="successful deploy" src="../_images/successful-deploy.png" />\</p>
+<p>A <strong>failed deploy</strong> will have a red cross next to it. Clicking through the steps can help you determine what went wrong in the deploy.</p>
+<blockquote>
+<div><p>Warning: A website can build properly, but may not deploy properly! It is a good idea to check after making big changes.</p>
+</div></blockquote>
+<p><img alt="failed deploy" src="../_images/failed-deploy.png" />\</p>
+<section id="a-very-specific-build-and-deployment-warning">
+<h3>A Very Specific Build and Deployment Warning {-}<a class="headerlink" href="#a-very-specific-build-and-deployment-warning" title="Link to this heading">#</a></h3>
+<p><img alt="two consecutive deploy warnings" src="../_images/exclamation-point-deploy-warning.png" />\</p>
+<p>This is a very specific (and unlikely) warning. It occurs when 1 deploy hasn’t finished, but another deploy began. THIS IS NOT A CONCERN. This is a warning message you do not have to worry about!</p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -414,20 +472,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="old-workshop.html"
+       href="git/git-clone.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><strong>Recurring Workshop</strong>: Copying [RC]</p>
+        <p class="prev-next-title">Git Clone!</p>
       </div>
     </a>
     <a class="right-next"
-       href="git-setup.html"
+       href="../edit/formatting.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Command Line, SSH Connection &amp; Git Clone</p>
+        <p class="prev-next-title">Formatting</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -437,6 +495,26 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workshop-repo-vs-workshop-website">Workshop Repo VS Workshop Website</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-your-deploy-and-see-your-website-check-deploy">Check Your Deploy and See your Website! {#check-deploy}</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-very-specific-build-and-deployment-warning">A Very Specific Build and Deployment Warning {-}</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
