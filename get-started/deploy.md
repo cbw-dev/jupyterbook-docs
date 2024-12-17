@@ -3,12 +3,17 @@
 
 ### Workshop Repo VS Workshop Website
 
-EXPLAIN GHP PAGES
+EXPLAIN GHP PAGES INSTEAD
+
+Let's recap.
+
+You currently have all the files we need to build and develop your website (all included in the basic workshop template), locally on your own laptop. You want to make changes to these files, so that you can add content for your workshop! We make these changes locally. We also "build" (convert our files into HTML pages) locally. Yet we 
+
+Now, you have made a repository that holds what GitHub needs to make our website (the basic workshop template). Essentially, the template has already been configured so that the html files that make up our website go into a folder called `docs`. We need to tell GitHub to look at the `docs` folder to find our website files and make it available to see online (a.k.a deploy it). This is what we mean when we say CBW uses GitHub pages to deploy our website.
 
 ```{admonition} Distinction
-GitHub (ex. https://github.com/cbw-dev/bookdown-template) holds your repo, which has version control for all your files! <br> The deployed website (ex. https://cbw-dev.github.io/bookdown-template/) has the workshop online.
+GitHub (ex. https://github.com/cbw-dev/jupyterbook-template) holds your repo, which has version control for all your files! <br> The deployed website (ex. https://cbw-dev.github.io/jupyterbook-template/) has the workshop online.
 ```
-
 
 1. In the top navigation bar, select **Settings**.
 ![Base repo, pointing at settings](../img/git-instruct/github-settings.png)

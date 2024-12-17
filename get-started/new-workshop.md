@@ -26,8 +26,11 @@ Certain aspects of the setup for workshops will be different depending on your r
     This may take a couple seconds to generate. After it loads, you will be brought to a new repository for the new workshop!
 
 <br>
-<br>
 
-Our next step is to turn these files in your repository into a website. First, we need to get these files locally, setup a git connection, and deploy using ghp-pages! (We will explain what these actions do!)
+Our next step is to turn these files in your repository into a website. First, we need to get these files locally [(setup a git connection)](ssh-connect) and [deploy using ghp-pages](deploy)! (We will explain what these actions do!)
+
+```{note}
+If you don't feel comfortable navigating your folders via Terminal (Linux/macOS) or Command Prompt/Windows PowerShell (Windows), consider reading through and referring to [](command-line).
+```
 
 ## Setting Up Team Access [RC?] (Nia will fill this in)

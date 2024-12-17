@@ -6,9 +6,6 @@ Certain aspects of the setup for workshops will be different depending on your r
 You should be on this page if CBW already has a version of this workshop as a website, and you mainly wanted to reuse it (maybe with some edits).
 ```
 
-## WE NEED TO TEST THIS SINCE IT USES GHP PAGES
-
-
 ## Recreate the Workshop
 
 We will be creating a copy the existing workshop and workshop website by git forking the repository that hosts the existing workshop website. (This is explained more thoroughly as you actually create your website!)
@@ -34,7 +31,12 @@ We will be creating a copy the existing workshop and workshop website by git for
 
 4. You will be brought to your new repository, which will host the updated version of the pre-existing workshop!
 
-Now it's time to generate a website from your newly forked repository! That is, deploy your website. Click [here](deploy)!
+Our next step is to turn these files in your repository into a website. First, we need to get these files locally [(setup a git connection)](ssh-connect) and [deploy using ghp-pages](deploy)! (We will explain what these actions do!)
+
+```{note}
+If you don't feel comfortable navigating your folders via Terminal (Linux/macOS) or Command Prompt/Windows PowerShell (Windows), consider reading through and referring to [](command-line).
+```
+
 
 ## Making Updates
 
