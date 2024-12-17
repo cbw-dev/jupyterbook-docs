@@ -1,6 +1,9 @@
 (git-clone)=
 # Git Clone!
 
+<!-- NIA:
+Note: VSCode makes git cloning very easy ! -->
+
 Now that we *can* get updates from our online repository (on GitHub!), let's copy it into locally, so that we can edit locally. That is, we will be **git cloning** the template onto our local computer.
 
 1.  Navigate to where in your local file system you want to have your workshop in Terminal/Windows PowerShell/Command Prompt.

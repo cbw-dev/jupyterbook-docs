@@ -28,3 +28,7 @@ parts:
   - caption: Brain Dump
     chapters:
     - file: braindump
+  
+  - caption: Developer's Guide
+    chapters:
+    - file: dev-guide/dev-guide-intro
