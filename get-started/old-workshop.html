@@ -64,7 +64,7 @@
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Git Setup" href="git/git-setup.html" />
+    <link rel="next" title="Command Line for Newbies" href="command-line.html" />
     <link rel="prev" title="New Workshop: Creation [RC]" href="new-workshop.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -174,9 +174,11 @@
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="new-workshop.html"><strong>New Workshop</strong>: Creation [RC]</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Recurring Workshop</strong>: Copying [RC]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command-line.html">Command Line for Newbies</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="git/git-setup.html">Git Setup</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="git/ssh-connection.html">Setting Up Your SSH Connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git/git-clone.html">Git Clone!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git/git-commands.html">Git Commands Reference Sheet</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="deploy.html">How to Deploy Your Website</a></li>
@@ -381,7 +383,6 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#we-need-to-test-this-since-it-uses-ghp-pages">WE NEED TO TEST THIS SINCE IT USES GHP PAGES</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recreate-the-workshop">Recreate the Workshop</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-updates">Making Updates</a></li>
 </ul>
@@ -402,9 +403,6 @@
 <p class="admonition-title">Note</p>
 <p>You should be on this page if CBW already has a version of this workshop as a website, and you mainly wanted to reuse it (maybe with some edits).</p>
 </div>
-<section id="we-need-to-test-this-since-it-uses-ghp-pages">
-<h2>WE NEED TO TEST THIS SINCE IT USES GHP PAGES<a class="headerlink" href="#we-need-to-test-this-since-it-uses-ghp-pages" title="Link to this heading">#</a></h2>
-</section>
 <section id="recreate-the-workshop">
 <h2>Recreate the Workshop<a class="headerlink" href="#recreate-the-workshop" title="Link to this heading">#</a></h2>
 <p>We will be creating a copy the existing workshop and workshop website by git forking the repository that hosts the existing workshop website. (This is explained more thoroughly as you actually create your website!)</p>
@@ -429,7 +427,11 @@
 <ol class="arabic simple" start="4">
 <li><p>You will be brought to your new repository, which will host the updated version of the pre-existing workshop!</p></li>
 </ol>
-<p>Now it’s time to generate a website from your newly forked repository! That is, deploy your website. Click <a class="reference internal" href="deploy.html#deploy"><span class="std std-ref">here</span></a>!</p>
+<p>Our next step is to turn these files in your repository into a website. First, we need to get these files locally <a class="reference internal" href="git/ssh-connection.html#ssh-connect"><span class="std std-ref">(setup a git connection)</span></a> and <a class="reference internal" href="deploy.html#deploy"><span class="std std-ref">deploy using ghp-pages</span></a>! (We will explain what these actions do!)</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you don’t feel comfortable navigating your folders via Terminal (Linux/macOS) or Command Prompt/Windows PowerShell (Windows), consider reading through and referring to <a class="reference internal" href="command-line.html#command-line"><span class="std std-ref">Command Line for Newbies</span></a>.</p>
+</div>
 </section>
 <section id="making-updates">
 <h2>Making Updates<a class="headerlink" href="#making-updates" title="Link to this heading">#</a></h2>
@@ -478,11 +480,11 @@
       </div>
     </a>
     <a class="right-next"
-       href="git/git-setup.html"
+       href="command-line.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Git Setup</p>
+        <p class="prev-next-title">Command Line for Newbies</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -503,7 +505,6 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#we-need-to-test-this-since-it-uses-ghp-pages">WE NEED TO TEST THIS SINCE IT USES GHP PAGES</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recreate-the-workshop">Recreate the Workshop</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-updates">Making Updates</a></li>
 </ul>

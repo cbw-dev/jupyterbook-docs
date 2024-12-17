@@ -1,16 +1,15 @@
+(command-line)= 
 # Command Line for Newbies
-
-If you're familiar with the command line and have already established a SSH connection, continue to [git cloning your workshop template locally](#git-clone).
 
 ## Introduction to the Command Line
 
 This is for those who have no (or extremely little) experience with the command line.
 
-Using the command line, you can use text commands to interact with your computer's operating system. For us, we will be using it to move around our folders and to [git clone](#git-clone) our workshop into our computer, so we can work on it using RStudio!
+Using the command line, you can use text commands to interact with your computer's operating system. For us, we will be using it to move around our folders and to [git clone](git-clone) our workshop into our computer, so we can work on it using RStudio!
 
-> Note:
->
-> Do not be worried about using terminal, espeically git commands in terminal! Once we are all setup, we will never have to touch the terminal and write these commands again!
+```{note}
+You should be comfortable navigating through your folders when using the Jupyter Book Template
+```
 
 ### Terminal, Command Prompt and Windows PowerShell
 
