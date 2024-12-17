@@ -3,19 +3,19 @@ root: intro
 parts:
   - caption: Getting Started
     chapters:
-    - file: setup
-    - file: setupp
-    - file: build-deploy
+    - file: get-started/setup
+    - file: get-started/python-setup
+    - file: get-started/build-deploy
     
-  - caption: Formatting
+  - caption: Editing Your Template
     chapters:
-    - file: formatting
-    - file: markdown
+    - file: edit/formatting
+    - file: edit/markdown
 
-  - caption: Rendering Code
+  - caption: Code Customizations
     chapters:
-    - file: render-code
-    - file: markdown-notebooks
+    - file: code-custom/render-code
+    - file: code-custom/markdown-notebooks
 
   - caption: Brain Dump
     chapters:
