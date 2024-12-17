@@ -1,16 +1,25 @@
 (installations)=
 # Installations
 
+## VSCode
+
+If you have VSCode, skip to [installing Python](python-install).
+
+Download Visual Studio Code (VSCode) <a href="https://code.visualstudio.com/download" target="_blank">here</a>. CHoose the download package according to your operating system.
+
+Install with default settings.
+<!-- Not sure if default settings work, but they probably should, need to test -->
+
+(python-install)=
+## Install Python
+
 If you have Python, skip to [](content:references:jupyter-book-setup).
 
-`````{admonition} Notebook Execution Incompatibility for Windows
+```{admonition} Notebook Execution Incompatibility for Windows
 :class: warning
 
 There is an incompatiablity when using **Python 3.8**. Click <a href="https://jupyterbook.org/en/stable/advanced/windows.html#working-on-windows" target="_blank">here</a> for more information.
-
-`````
-
-## Python Setup
+```
 
 Install Python <a href="https://www.python.org/downloads/" target="_blank">here</a>.
 
