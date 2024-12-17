@@ -123,17 +123,23 @@ Run `ghp-import -n -p -f _build/html` in Terminal before you follow these steps.
 1. In the top navigation bar, select **Settings**.
 ![Base repo, pointing at settings](../img/git-instruct/github-settings.png)
 
+<br>
+
 2. Then, go to the **Pages** sidebar option.
 ![Selecting pages from the settings page](../img/git-instruct/github-select-pages.png)
 
-3. "Deploy from a branch" is already selected, which is what we want. We must **change the branch from "none" to "main"**. Select the "None" dropdown button and select "main".
+<br>
+
+<!-- NIA: For step 3, instead of "None", it may be set to "main" - must double check! Also, update the image. -->
+
+3. "Deploy from a branch" is already selected, which is what we want. We must **change the branch from "none" to "gh-pages"**. Select the "None" dropdown button and select "gh-pages".
 ![Select main as the branc](../img/git-instruct/github-deploy-main.png)
 
-4. Then, change the folder from `/ root` to `/docs`. Then **press save**.
-![Select /docs as the branch](../img/git-instruct/github-deploy-docs.png)
-    
-    Great! Now we're waiting on the page to build and deploy, which should take less than a minute.
-  
+<br>
+
+4. You can leave the second toggle option as `/ (root)`. Great! Now we're waiting on the page to deploy, which should take less than a minute.
+
+
 (check-deploy)=
 ## Check Your Deploy and See your Website!
         
@@ -146,13 +152,16 @@ You can click <u>**pages build and deployment**</u> for updates.
 ![where to click for pages build and deployment information](../img/git-instruct/pages-build-and-deployment.png)
 
 <br>
+
 A **successful deploy** will have a green checkmark next to it. You can inspect the 3 steps: build, report-build-status, deploy. Once it's done deploying, **you can find the website at the link provided under the "deploy" step**!
 
 ![successful deploy](../img/git-instruct/successful-deploy.png)
 
 A **failed deploy** will have a red cross next to it. Clicking through the steps can help you determine what went wrong in the deploy.
 
-> Warning: A website can build properly, but may not deploy properly! It is a good idea to check after making big changes.
+```{warning}
+A website can build properly, but may not deploy properly! It is a good idea to check after making big changes.
+```
 
 ![failed deploy](../img/git-instruct/failed-deploy.png)
 

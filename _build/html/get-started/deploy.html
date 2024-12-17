@@ -504,17 +504,24 @@
 <p class="admonition-title">Note</p>
 <p>Run <code class="docutils literal notranslate"><span class="pre">ghp-import</span> <span class="pre">-n</span> <span class="pre">-p</span> <span class="pre">-f</span> <span class="pre">_build/html</span></code> in Terminal before you follow these steps.</p>
 </div>
-<ol class="arabic">
+<ol class="arabic simple">
 <li><p>In the top navigation bar, select <strong>Settings</strong>.
 <img alt="Base repo, pointing at settings" src="../_images/github-settings.png" /></p></li>
+</ol>
+<br>
+<ol class="arabic simple" start="2">
 <li><p>Then, go to the <strong>Pages</strong> sidebar option.
 <img alt="Selecting pages from the settings page" src="../_images/github-select-pages.png" /></p></li>
-<li><p>“Deploy from a branch” is already selected, which is what we want. We must <strong>change the branch from “none” to “main”</strong>. Select the “None” dropdown button and select “main”.
+</ol>
+<br>
+<!-- NIA: For step 3, instead of "None", it may be set to "main" - must double check! Also, update the image. -->
+<ol class="arabic simple" start="3">
+<li><p>“Deploy from a branch” is already selected, which is what we want. We must <strong>change the branch from “none” to “gh-pages”</strong>. Select the “None” dropdown button and select “gh-pages”.
 <img alt="Select main as the branc" src="../_images/github-deploy-main.png" /></p></li>
-<li><p>Then, change the folder from <code class="docutils literal notranslate"><span class="pre">/</span> <span class="pre">root</span></code> to <code class="docutils literal notranslate"><span class="pre">/docs</span></code>. Then <strong>press save</strong>.
-<img alt="Select /docs as the branch" src="../_images/github-deploy-docs.png" /></p>
-<p>Great! Now we’re waiting on the page to build and deploy, which should take less than a minute.</p>
-</li>
+</ol>
+<br>
+<ol class="arabic simple" start="4">
+<li><p>You can leave the second toggle option as <code class="docutils literal notranslate"><span class="pre">/</span> <span class="pre">(root)</span></code>. Great! Now we’re waiting on the page to deploy, which should take less than a minute.</p></li>
 </ol>
 </section>
 <section id="check-your-deploy-and-see-your-website">
@@ -524,12 +531,13 @@
 <p>You can click <u><strong>pages build and deployment</strong></u> for updates.</p>
 <p><img alt="where to click for pages build and deployment information" src="../_images/pages-build-and-deployment.png" /></p>
 <br>
-A **successful deploy** will have a green checkmark next to it. You can inspect the 3 steps: build, report-build-status, deploy. Once it's done deploying, **you can find the website at the link provided under the "deploy" step**!
+<p>A <strong>successful deploy</strong> will have a green checkmark next to it. You can inspect the 3 steps: build, report-build-status, deploy. Once it’s done deploying, <strong>you can find the website at the link provided under the “deploy” step</strong>!</p>
 <p><img alt="successful deploy" src="../_images/successful-deploy.png" /></p>
 <p>A <strong>failed deploy</strong> will have a red cross next to it. Clicking through the steps can help you determine what went wrong in the deploy.</p>
-<blockquote>
-<div><p>Warning: A website can build properly, but may not deploy properly! It is a good idea to check after making big changes.</p>
-</div></blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>A website can build properly, but may not deploy properly! It is a good idea to check after making big changes.</p>
+</div>
 <p><img alt="failed deploy" src="../_images/failed-deploy.png" /></p>
 <section id="a-very-specific-build-and-deployment-warning">
 <h3>A Very Specific Build and Deployment Warning<a class="headerlink" href="#a-very-specific-build-and-deployment-warning" title="Link to this heading">#</a></h3>
