@@ -1,5 +1,5 @@
-(git-clone=)
-## Git Clone!
+(git-clone)=
+# Git Clone!
 
 <!-- explain -->
 Getting the Template on Your Local Computer
