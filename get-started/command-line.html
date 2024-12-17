@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>New Workshop: Creation [RC] &#8212; My sample book</title>
+    <title>Command Line for Newbies &#8212; My sample book</title>
   
   
   
@@ -60,12 +60,10 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'get-started/new-workshop';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'get-started/command-line';</script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Recurring Workshop: Copying [RC]" href="old-workshop.html" />
-    <link rel="prev" title="Installations" href="install.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -116,6 +114,8 @@
     <div class="bd-container__inner bd-page-width">
       
       
+      
+        
       
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
@@ -170,9 +170,9 @@
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installations</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>New Workshop</strong>: Creation [RC]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="new-workshop.html"><strong>New Workshop</strong>: Creation [RC]</a></li>
 <li class="toctree-l1"><a class="reference internal" href="old-workshop.html"><strong>Recurring Workshop</strong>: Copying [RC]</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="git/git-setup.html">Git Setup</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="git/ssh-connection.html">Setting Up Your SSH Connection</a></li>
@@ -265,7 +265,7 @@
       
       
       
-      <li><a href="https://github.com/cbw-dev/jupyterbook-docs/issues/new?title=Issue%20on%20page%20%2Fget-started/new-workshop.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/cbw-dev/jupyterbook-docs/issues/new?title=Issue%20on%20page%20%2Fget-started/command-line.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -295,7 +295,7 @@
       
       
       
-      <li><a href="../_sources/get-started/new-workshop.md" target="_blank"
+      <li><a href="../_sources/get-started/command-line.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -371,7 +371,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>New Workshop: Creation [RC]</h1>
+    <h1>Command Line for Newbies</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -381,8 +381,20 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-the-workshop-rc">Setup the Workshop [RC]</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-team-access-rc-nia-will-fill-this-in">Setting Up Team Access [RC?] (Nia will fill this in)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-the-command-line">Introduction to the Command Line</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#terminal-command-prompt-and-windows-powershell">Terminal, Command Prompt and Windows PowerShell</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-commands-for-us">Common Commands (for us)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pwd-or-echo-cd-unnumbered">pwd OR echo %cd% {.unnumbered}</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ls-or-dir-unnumbered">ls OR dir {.unnumbered}</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cd-unnumbered">cd {.unnumbered}</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mkdir-unnumbered">mkdir {.unnumbered}</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rmdir-unnumbered">rmdir {.unnumbered}</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rmdir-r-or-rmdir-s-unnumbered">rmdir -r OR rmdir /s {.unnumbered}</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#up-and-down-arrows-unnumbered">Up [⬆] and Down [⬇] Arrows {.unnumbered}</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -394,36 +406,76 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="new-workshop-creation-rc">
-<h1><strong>New Workshop</strong>: Creation [RC]<a class="headerlink" href="#new-workshop-creation-rc" title="Link to this heading">#</a></h1>
-<p>Certain aspects of the setup for workshops will be different depending on your role. Headers ending in “[RC]” are for Regional Coordinators. Headers without “[RC]” are assumed to be relevant to both RC and workshop teams.</p>
-<section id="setup-the-workshop-rc">
-<h2>Setup the Workshop [RC]<a class="headerlink" href="#setup-the-workshop-rc" title="Link to this heading">#</a></h2>
-<ol class="arabic">
-<li><p>First, let’s <strong>go to the <a href="https://github.com/cbw-dev/jupyterbook-template" target="_blank">Jupyter Book template</a></strong>.
-<br>
-<br></p></li>
-<li><p><strong>Click on the “Use this template”</strong> green button, which is to the right of the title of the repository “jupyterbook-template”. Then, press the dropdown option: “<strong>Create a new repository</strong>”, as seen below.</p>
-<p><img alt="Image of the repo and how to find make a template" src="../_images/make-a-template.png" />
-<br> <!-- enforces a space after the image --></p>
-</li>
-</ol>
-<br>
-<br>
-<!-- MUST ADD A LINK TO THE CBW GUIDELINES FOR NAMING -->
-<ol class="arabic" start="3">
-<li><p>You will be brought to a “Create a new repository” page. Fill out the blanks as seen below. That is, <strong>change the owner to “bioinformaticsdotca”</strong>, make it <strong>public</strong>, fill in the <strong>repository name and description</strong> according to <a class="reference internal" href="#"><span class="xref myst">CBW Guidelines</span></a>. <br>”Include all branches” does not need to be selected.</p>
-<p><img alt="Image showing how to make a new repo from a template repo" src="../_images/make-new-repo.png" />
-<br></p>
-<p>This may take a couple seconds to generate. After it loads, you will be brought to a new repository for the new workshop!</p>
-</li>
-</ol>
-<br>
-<br>
-<p>Our next step is to turn these files in your repository into a website. First, we need to get these files locally, setup a git connection, and deploy using ghp-pages! (We will explain what these actions do!)</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="command-line-for-newbies">
+<h1>Command Line for Newbies<a class="headerlink" href="#command-line-for-newbies" title="Link to this heading">#</a></h1>
+<p>If you’re familiar with the command line and have already established a SSH connection, continue to <a class="reference internal" href="#git-clone"><span class="xref myst">git cloning your workshop template locally</span></a>.</p>
+<section id="introduction-to-the-command-line">
+<h2>Introduction to the Command Line<a class="headerlink" href="#introduction-to-the-command-line" title="Link to this heading">#</a></h2>
+<p>This is for those who have no (or extremely little) experience with the command line.</p>
+<p>Using the command line, you can use text commands to interact with your computer’s operating system. For us, we will be using it to move around our folders and to <a class="reference internal" href="#git-clone"><span class="xref myst">git clone</span></a> our workshop into our computer, so we can work on it using RStudio!</p>
+<blockquote>
+<div><p>Note:</p>
+<p>Do not be worried about using terminal, espeically git commands in terminal! Once we are all setup, we will never have to touch the terminal and write these commands again!</p>
+</div></blockquote>
+<section id="terminal-command-prompt-and-windows-powershell">
+<h3>Terminal, Command Prompt and Windows PowerShell<a class="headerlink" href="#terminal-command-prompt-and-windows-powershell" title="Link to this heading">#</a></h3>
+<!-- I DO NOT KNOW HOW EXACTLY ACCURATE MY COMMENTS ON "UNIX-BASED" ARE -->
+<p>We can use the command line using certain tools and applications. Terminal is a Unix-based (meaning Linux and macOS computer already have it) application that allows you to access the command line. Similarly, Command Prompt (CMD) and Windows PowerShell give access to the command line on Windows computers. However, Terminal, Command Prompt and Windows PowerShell differ in what commands are accepted. The same commands we give to Terminal may not work in Command Prompt and/or Windows PowerShell.</p>
+<blockquote>
+<div><p>Note: Windows PowerShell tends to be more advanced than Command Prompt, and often can accept more commands that are accepted by Terminal than Command Prompt.</p>
+</div></blockquote>
 </section>
-<section id="setting-up-team-access-rc-nia-will-fill-this-in">
-<h2>Setting Up Team Access [RC?] (Nia will fill this in)<a class="headerlink" href="#setting-up-team-access-rc-nia-will-fill-this-in" title="Link to this heading">#</a></h2>
+<section id="common-commands-for-us">
+<h3>Common Commands (for us)<a class="headerlink" href="#common-commands-for-us" title="Link to this heading">#</a></h3>
+<!-- Consider making this explanation a video -->
+<p>We won’t need to know that many commands, but for easy navigation and understanding, here is what you (generally) need:</p>
+<div class="{.greenbox docutils">
+<p><strong>Note:</strong></p>
+<p>Commands are written below as headers, with an explanation provided beneath.</p>
+<p>They follow the format: “[Linux Command] OR “[Windows Command]”</p>
+</div>
+<section id="pwd-or-echo-cd-unnumbered">
+<h4>pwd OR echo %cd% {.unnumbered}<a class="headerlink" href="#pwd-or-echo-cd-unnumbered" title="Link to this heading">#</a></h4>
+<p>“pwd” stands for “print working directory”. It is a command that works in <strong>Linux</strong> and <strong>Windows PowerShell</strong>. The equivalent in <strong>Command Prompt</strong> is “echo %cd%”. For example, below our output is where in my folders the current .Rmd file that makes up this website is:</p>
+</section>
+<section id="ls-or-dir-unnumbered">
+<h4>ls OR dir {.unnumbered}<a class="headerlink" href="#ls-or-dir-unnumbered" title="Link to this heading">#</a></h4>
+<p>“ls” is a command that works in <strong>Linux</strong> and <strong>Windows PowerShell</strong>. It’s short for “list” and outputs all the files and folders in the directory (folder) you are currently in. (Note: this code only shows 4 files to save space!)</p>
+<div class="highlight-{bash, notranslate"><div class="highlight"><pre><span></span>ls
+</pre></div>
+</div>
+<!-- to save space, only output the first 4 lines -->
+<div class="highlight-{bash, notranslate"><div class="highlight"><pre><span></span>ls | head -n 4
+</pre></div>
+</div>
+<p>A similar command in <strong>Command Prompt</strong> is <code class="docutils literal notranslate"><span class="pre">dir</span></code> (short for “directory”), which also outputs the files and folders in your current directory (along with timestamps)!</p>
+</section>
+<section id="cd-unnumbered">
+<h4>cd {.unnumbered}<a class="headerlink" href="#cd-unnumbered" title="Link to this heading">#</a></h4>
+<p>“cd” stands for “change directory”. The command produces no output, but it allows you to go to a different directory than the one you’re currently in. For example,</p>
+<blockquote>
+<div><p><strong>Tip</strong>:<br>Typing “cd” and then hitting the <code class="docutils literal notranslate"><span class="pre">tab</span></code> key will give you the available directories you can go to from where you are, or what you have currently typed in. If there is only one option, hitting <code class="docutils literal notranslate"><span class="pre">tab</span></code> will fill in your command with that option. (This works when typing in any file location into your command line, not only using “cd”). On macOS, the terminal will give you a list if there are multiple options. On Windows, both Command Prompt and Windows Powershell will fill in potential options, and you can hit tab multiple times untill you find your desired file destination.</p>
+</div></blockquote>
+<p><strong>File Location Shorthands</strong> When referring to file addresses, there are helpful shorthands! Here’s a summary: - <code class="docutils literal notranslate"><span class="pre">.</span></code> = Current Directory - <code class="docutils literal notranslate"><span class="pre">..</span></code> = Parent Directory - <code class="docutils literal notranslate"><span class="pre">~</span></code> = Home Directory</p>
+<p>Here’s an example (recall, cd produces no output!):</p>
+</section>
+<section id="mkdir-unnumbered">
+<h4>mkdir {.unnumbered}<a class="headerlink" href="#mkdir-unnumbered" title="Link to this heading">#</a></h4>
+<p>“mkdir [directory address]” stands for “make directory”. Essentially, mkdir will make an empty directory (folder) at a specified location. For example: <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">test</span></code> would create a folder named “test” in our current directory. The following commands do the same thing. Note: <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">./test</span></code> does the same thing.</p>
+</section>
+<section id="rmdir-unnumbered">
+<h4>rmdir {.unnumbered}<a class="headerlink" href="#rmdir-unnumbered" title="Link to this heading">#</a></h4>
+<p>“rmdir [directory address]” removes an <em>empty</em> directory. For example, <code class="docutils literal notranslate"><span class="pre">rmdir</span> <span class="pre">test</span></code> would delete the directory we just made!</p>
+</section>
+<section id="rmdir-r-or-rmdir-s-unnumbered">
+<h4>rmdir -r OR rmdir /s {.unnumbered}<a class="headerlink" href="#rmdir-r-or-rmdir-s-unnumbered" title="Link to this heading">#</a></h4>
+<p>“rmdir -r [directory address]” (Terminal &amp; Windows PowerShell) and “rmdir /s [directory address]” removes a directory recursively, meaning it deletes all the contents of the folder as we all as the folder in itself. Be careful, you can not restore a directory you removed using “rmdir”!</p>
+</section>
+<section id="up-and-down-arrows-unnumbered">
+<h4>Up [⬆] and Down [⬇] Arrows {.unnumbered}<a class="headerlink" href="#up-and-down-arrows-unnumbered" title="Link to this heading">#</a></h4>
+<p>One of the most useful tips for using the command line is to use your up [↑] and down [↓] arrow keys. Using the up [↑] key gives you the previous commands you typed, and the down [↓] arrow returns you to your earlier commands.</p>
+</section>
+</section>
 </section>
 </section>
 
@@ -457,24 +509,6 @@
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="install.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Installations</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="old-workshop.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><strong>Recurring Workshop</strong>: Copying [RC]</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -492,8 +526,20 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-the-workshop-rc">Setup the Workshop [RC]</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-team-access-rc-nia-will-fill-this-in">Setting Up Team Access [RC?] (Nia will fill this in)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-the-command-line">Introduction to the Command Line</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#terminal-command-prompt-and-windows-powershell">Terminal, Command Prompt and Windows PowerShell</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-commands-for-us">Common Commands (for us)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pwd-or-echo-cd-unnumbered">pwd OR echo %cd% {.unnumbered}</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ls-or-dir-unnumbered">ls OR dir {.unnumbered}</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cd-unnumbered">cd {.unnumbered}</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mkdir-unnumbered">mkdir {.unnumbered}</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rmdir-unnumbered">rmdir {.unnumbered}</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rmdir-r-or-rmdir-s-unnumbered">rmdir -r OR rmdir /s {.unnumbered}</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#up-and-down-arrows-unnumbered">Up [⬆] and Down [⬇] Arrows {.unnumbered}</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

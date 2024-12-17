@@ -174,8 +174,12 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Installations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="new-workshop.html"><strong>New Workshop</strong>: Creation [RC]</a></li>
 <li class="toctree-l1"><a class="reference internal" href="old-workshop.html"><strong>Recurring Workshop</strong>: Copying [RC]</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="git/git-setup.html">Git Setup</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="git/ssh-connection.html">Setting Up Your SSH Connection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git/git-clone.html">Git Clone!</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="deploy.html">How to Deploy Your Website</a></li>
-<li class="toctree-l1"><a class="reference internal" href="git-setup.html">Command Line, SSH Connection &amp; Git Clone</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Editing Your Workshop</span></p>
 <ul class="nav bd-sidenav">
@@ -378,8 +382,9 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-setup">Python Setup</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-book-installation">Jupyter Book Installation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git-install">Git Install</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-jupyter-book">Install Jupyter Book</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-ghp-import">Install ghp-import</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-git">Install Git</a></li>
 </ul>
             </nav>
         </div>
@@ -393,7 +398,7 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="installations">
 <span id="id1"></span><h1>Installations<a class="headerlink" href="#installations" title="Link to this heading">#</a></h1>
-<p>If you have Python, skip to <a class="reference internal" href="#content-references-jupyter-book-setup"><span class="std std-ref">Jupyter Book Installation</span></a>.</p>
+<p>If you have Python, skip to <a class="reference internal" href="#content-references-jupyter-book-setup"><span class="std std-ref">Install Jupyter Book</span></a>.</p>
 <div class="warning admonition">
 <p class="admonition-title">Notebook Execution Incompatibility for Windows</p>
 <p>There is an incompatiablity when using <strong>Python 3.8</strong>. Click <a href="https://jupyterbook.org/en/stable/advanced/windows.html#working-on-windows" target="_blank">here</a> for more information.</p>
@@ -428,8 +433,8 @@
 </div>
 <p>Now that we have Python and pip properly installed, we can download and install Jupyter Book!</p>
 </section>
-<section id="jupyter-book-installation">
-<span id="content-references-jupyter-book-setup"></span><h2>Jupyter Book Installation<a class="headerlink" href="#jupyter-book-installation" title="Link to this heading">#</a></h2>
+<section id="install-jupyter-book">
+<span id="content-references-jupyter-book-setup"></span><h2>Install Jupyter Book<a class="headerlink" href="#install-jupyter-book" title="Link to this heading">#</a></h2>
 <p>Run the following command (and if you needed <code class="docutils literal notranslate"><span class="pre">pip3</span></code> before, use <code class="docutils literal notranslate"><span class="pre">pip3</span></code> here):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>jupyter-book
 </pre></div>
@@ -459,8 +464,16 @@
 </div>
 <p>If you are having some difficulty downloading, try restarting your Terminal/Command Prompt/Windows PowerShell and ensuring your previous installations were done properly.</p>
 </section>
-<section id="git-install">
-<h2>Git Install<a class="headerlink" href="#git-install" title="Link to this heading">#</a></h2>
+<section id="install-ghp-import">
+<h2>Install ghp-import<a class="headerlink" href="#install-ghp-import" title="Link to this heading">#</a></h2>
+<p>ghp-import is a Python library that makes creating a website using GitHub pages super easy! We’ll explain this more later, for now, run the command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">ghp</span><span class="o">-</span><span class="kn">import</span>
+</pre></div>
+</div>
+<p>Again, run <code class="docutils literal notranslate"><span class="pre">pip3</span></code> if you had to before.</p>
+</section>
+<section id="install-git">
+<h2>Install Git<a class="headerlink" href="#install-git" title="Link to this heading">#</a></h2>
 <p>Git is a tool that will help us with version control when editing your workshop. Linux and macOS computers tend to have Git installed. Windows computers must install Git. However, make sure to double check if you already have Git, so that you don’t have to install it again! <strong>Check if you have Git</strong> by running this command in terminal/command prompt:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>--version
 </pre></div>
@@ -557,8 +570,9 @@
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-setup">Python Setup</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-book-installation">Jupyter Book Installation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git-install">Git Install</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-jupyter-book">Install Jupyter Book</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-ghp-import">Install ghp-import</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-git">Install Git</a></li>
 </ul>
   </nav></div>
 

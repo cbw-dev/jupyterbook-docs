@@ -51,7 +51,7 @@ pip 24.3.1 from /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.1
 Now that we have Python and pip properly installed, we can download and install Jupyter Book!
 
 (content:references:jupyter-book-setup)=
-## Jupyter Book Installation
+## Install Jupyter Book
 
 Run the following command (and if you needed `pip3` before, use `pip3` here):
 
@@ -86,7 +86,17 @@ Commands:
 
 If you are having some difficulty downloading, try restarting your Terminal/Command Prompt/Windows PowerShell and ensuring your previous installations were done properly.
 
-## Git Install
+## Install ghp-import 
+
+ghp-import is a Python library that makes creating a website using GitHub pages super easy! We'll explain this more later, for now, run the command:
+
+```
+pip install ghp-import
+```
+
+Again, run `pip3` if you had to before.
+
+## Install Git
 
 Git is a tool that will help us with version control when editing your workshop. Linux and macOS computers tend to have Git installed. Windows computers must install Git. However, make sure to double check if you already have Git, so that you don't have to install it again! **Check if you have Git** by running this command in terminal/command prompt:
 
