@@ -10,7 +10,6 @@ parts:
     - file: get-started/git/git-setup
       sections:
       - file: get-started/git/ssh-connection
-      - file: get-started/git/ssh-intruct
       - file: get-started/git/git-clone
       - file: get-started/git/git-commands
     - file: get-started/deploy

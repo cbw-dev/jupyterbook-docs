@@ -360,7 +360,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -376,6 +378,17 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-a-new-ssh-key"><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)" target="_blank">Generating a new SSH key</a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linux-mac-adding-your-ssh-key-to-the-ssh-agent"><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=mac#adding-your-ssh-key-to-the-ssh-agent" target="_blank">[Linux/Mac] Adding your SSH key to the ssh-agent</a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#windows-adding-your-ssh-key-to-the-ssh-agent"><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=windows#adding-your-ssh-key-to-the-ssh-agent" target="_blank">[Windows] Adding your SSH key to the ssh-agent</a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-new-ssh-key-to-your-account"><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-ssh-key-to-your-account" target="_blank">Adding a new SSH key to your account</a></a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -387,6 +400,161 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="setting-up-your-ssh-connection">
 <span id="ssh-connect"></span><h1>Setting Up Your SSH Connection<a class="headerlink" href="#setting-up-your-ssh-connection" title="Link to this heading">#</a></h1>
+<p>We need to create an SSH connection. You have already set this up if you have been git cloning, pulling from and pushing to GitHub. If you have, continue to <a class="reference internal" href="git-clone.html#git-clone"><span class="std std-ref">git cloning</span></a>. If you haven’t, keep reading!</p>
+<p>Essentially, we’re doing these steps to be able to update and receive updates from our GitHub repository, with security!</p>
+<p>Follow the following 3 main steps. Each of these subheaders links to GitHub’s official docs, if you would prefer to follow them instead! (Below is the simplified version of the instructions, if you’ve already been working with GitHub/SSH connection and want to make a new one, consider using the official docs.) The official docs may be more up-to-date.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>If you do decide to use GitHub’s docs,</em> <em><strong>choose the page</strong></em> <em>(the different tabs are clickable at the top of the page) that matches your operating system (Mac/Windows/Linux).</em></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can do these commands anywhere in your files. You do not need to be in your home directory.</p>
+</div>
+<div class="admonition-output-vs-commands admonition">
+<p class="admonition-title"><strong>Output VS Commands</strong></p>
+<p>In our instructions (and the GitHub docs), output is prefaced by a “&gt;” sign.</p>
+<p>In the GitHub instructions, commands start with “$” sign. In Linux, the terminal tends to give you a “$” to indicate where to run your command. Thus, GitHub uses a “$” to indicate that what comes after is the command you should run. <strong>The “$” is not part of the command.</strong> (We do not do this in our instructions).</p>
+</div>
+<section id="generating-a-new-ssh-key">
+<h2><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)" target="_blank">Generating a new SSH key</a><a class="headerlink" href="#generating-a-new-ssh-key" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>Open Terminal.</p></li>
+<li><p>Copy and paste this text into your terminal. <strong>Replace the email given below with your GitHub email address</strong> (the email address you used to sign up for Github). <em>Keep the quotations in your command.</em> Press enter to run the command.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;your_email@example.com&quot;</span>
+</pre></div>
+</div>
+<p>You will get this output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">Generating</span> <span class="n">public</span><span class="o">/</span><span class="n">private</span> <span class="n">ALGORITHM</span> <span class="n">key</span> <span class="n">pair</span><span class="o">.</span>
+<span class="o">&gt;</span> <span class="n">Enter</span> <span class="n">a</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">which</span> <span class="n">to</span> <span class="n">save</span> <span class="n">the</span> <span class="n">key</span> <span class="p">(</span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">YOU</span><span class="o">/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_ALGORITHM</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>Press enter. (This uses a default file and default file location.)</p>
+<p>If you have already created a SSH key and you are asked to rewrite another key, look at the <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key:~:text=Please%20note%20that%20if%20you%20created%20SSH%20keys%20previously%2C%20ssh%2Dkeygen%20may%20ask%20you%20to%20rewrite%20another%20key%2C%20in%20which%20case%20we%20recommend%20creating%20a%20custom%2Dnamed%20SSH%20key.%20To%20do%20so%2C%20type%20the%20default%20file%20location%20and%20replace%20id_ALGORITHM%20with%20your%20custom%20key%20name." target="_blank">GitHub Docs</a> for specific steps.</p>
+</li>
+<li><p>Type a secure passphrase (make up a password) when prompted with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">Enter</span> <span class="n">passphrase</span> <span class="p">(</span><span class="n">empty</span> <span class="k">for</span> <span class="n">no</span> <span class="n">passphrase</span><span class="p">):</span> <span class="p">[</span><span class="n">TYPE</span> <span class="n">YOUR</span> <span class="n">PASSPHRASE</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Before you freak out,</strong> this passphrase is so secretive that you won’t see it being typed. You won’t see a cursor moving and you won’t see ● instead of the characters you’re typing. Rest assured, your computer is receiving your text.</p>
+<p>If you make a mistake, it’s best to hit the “delete” bar many times, and retype.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">Enter</span> <span class="n">same</span> <span class="n">passphrase</span> <span class="n">again</span><span class="p">:</span> <span class="p">[</span><span class="n">TYPE</span> <span class="n">THE</span> <span class="n">SAME</span> <span class="n">PASSPHRASE</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You should keep note of this passphrase for your own use. We (should) never have to use it again after finishing these steps.</p>
+</div>
+<p>You will get specific output telling you information about your public key and key fingerprint. This is specific to the SSH connection you just made!</p>
+</li>
+</ol>
+</section>
+<section id="linux-mac-adding-your-ssh-key-to-the-ssh-agent">
+<h2><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=mac#adding-your-ssh-key-to-the-ssh-agent" target="_blank">[Linux/Mac] Adding your SSH key to the ssh-agent</a><a class="headerlink" href="#linux-mac-adding-your-ssh-key-to-the-ssh-agent" title="Link to this heading">#</a></h2>
+<p>These are the instructions if you have a Linux or macOS computer. Go <a class="reference internal" href="#windows-add-ssh-key"><span class="std std-ref">here</span></a> for the Windows instructions.</p>
+<ol class="arabic">
+<li><p>In terminal, run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>ssh-agent<span class="w"> </span>-s<span class="k">)</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>You will get this output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">Agent</span> <span class="n">pid</span> <span class="mi">59566</span>
+</pre></div>
+</div>
+<p><em>(Your number will most likely be different than the one above.)</em></p>
+</li>
+<li><p>If you’re using macOS Sierra 10.12.2 or later additions, you need to modify your <code class="docutils literal notranslate"><span class="pre">~/.ssh/config</span></code> file.</p>
+<ol class="arabic">
+<li><p>Check if you have a <code class="docutils literal notranslate"><span class="pre">~/.ssh/config</span></code> file: Run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>open<span class="w"> </span>~/.ssh/config
+</pre></div>
+</div>
+</li>
+<li><p>If you get the following output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">The</span> <span class="n">file</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">YOU</span><span class="o">/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">config</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">exist</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Create the file using the touch command: run the command given below</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch<span class="w"> </span>~/.ssh/config
+</pre></div>
+</div>
+</li>
+<li><p>Edit your <code class="docutils literal notranslate"><span class="pre">~/.ssh/config</span></code> file using the following instructions. (You can use any text editor you would like, such as vim). Below we use nano as a text editor.</p>
+<ul class="simple">
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">nano</span> <span class="pre">~/.ssh/config</span></code></p></li>
+<li><p>Add the following lines to this file.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Host</span> <span class="n">github</span><span class="o">.</span><span class="n">com</span>
+ <span class="n">AddKeysToAgent</span> <span class="n">yes</span>
+ <span class="n">UseKeychain</span> <span class="n">yes</span>
+ <span class="n">IdentityFile</span> <span class="o">~/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_ed25519</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Exit nano: <code class="docutils literal notranslate"><span class="pre">ctrl</span> <span class="pre">+</span> <span class="pre">X</span></code></p></li>
+<li><p>Type “Y” and hit enter to save changes, when asked the following</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Save modified buffer (ANSWERING &quot;No&quot; WILL DESTROY CHANGES) ?
+</pre></div>
+</div>
+</li>
+</ol>
+</li>
+<li><p>Return to terminal. Run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-add<span class="w"> </span>--apple-use-keychain<span class="w"> </span>~/.ssh/id_ed25519
+</pre></div>
+</div>
+<p>(You may be asked to enter your passphrase again. This is the same passphrase as before.)</p>
+</li>
+</ol>
+</section>
+<section id="windows-adding-your-ssh-key-to-the-ssh-agent">
+<span id="windows-add-ssh-key"></span><h2><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=windows#adding-your-ssh-key-to-the-ssh-agent" target="_blank">[Windows] Adding your SSH key to the ssh-agent</a><a class="headerlink" href="#windows-adding-your-ssh-key-to-the-ssh-agent" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>Right click on Windows Powershell (you can search for it in your search bar on your taskbar) and select “Run as administrator”.</p></li>
+<li><p>Run the following commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Get-Service<span class="w"> </span>-Name<span class="w"> </span>ssh-agent<span class="w"> </span><span class="p">|</span><span class="w"> </span>Set-Service<span class="w"> </span>-StartupType<span class="w"> </span>Manual
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Start-Service<span class="w"> </span>ssh-agent
+</pre></div>
+</div>
+</li>
+<li><p>Open a terminal window (without running as administrator). Run the following command, and <strong>replace YOU with your GitHub username</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-add<span class="w"> </span>c:/Users/YOU/.ssh/id_ed25519
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="adding-a-new-ssh-key-to-your-account">
+<h2><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-ssh-key-to-your-account" target="_blank">Adding a new SSH key to your account</a><a class="headerlink" href="#adding-a-new-ssh-key-to-your-account" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>Copy the SSH public key: Run the following command to copy the content of the ~/.ssh/id_ed25519.pub file to your clipboard:</p>
+<p><strong>On Mac/Linux:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pbcopy<span class="w"> </span>&lt;<span class="w"> </span>~/.ssh/id_ed25519.pub
+</pre></div>
+</div>
+<p><strong>On Windows:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>clip<span class="w"> </span>&lt;<span class="w"> </span>~/.ssh/id_ed25519.pub
+</pre></div>
+</div>
+</li>
+<li><p>Go to your GitHub account on the <a href="https://github.com/" target="_blank">GitHub</a> website. Click on your profile picture (icon in the upper right). Then, select <strong>Settings</strong>.</p></li>
+<li><p>Under the “Access” section, click <strong>SSH and GPG keys</strong>.</p></li>
+<li><p>Click <strong>New SSH key</strong> or <strong>Add SSH key</strong>.</p></li>
+<li><p>In the “Title” field, add a descriptive label for this key you are creating (ex. if this is your personal laptop, you can call the key: “Personal Laptop”).</p></li>
+<li><p>Leave the type of key as “authentication” (rather than “signing”). For our purposes, selecting authentication is fine.</p></li>
+<li><p>In the “Key” field, paste (we are pasting what we copied in step 1).</p></li>
+<li><p>Click <strong>Add SSH Key</strong>.</p></li>
+<li><p>If you are prompted, confirm access to your GitHub account.</p></li>
+</ol>
+<p>Finally, we’re all done! We’ve created a SSH connection between your device and GitHub!</p>
+<p>Thankfully, we only need to do these steps once! Additionally, most security questions are only asked the first time, so when you work on your workshop in the future, you will not have to redo these steps or confirm authentication.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -443,6 +611,25 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-a-new-ssh-key"><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)" target="_blank">Generating a new SSH key</a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linux-mac-adding-your-ssh-key-to-the-ssh-agent"><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=mac#adding-your-ssh-key-to-the-ssh-agent" target="_blank">[Linux/Mac] Adding your SSH key to the ssh-agent</a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#windows-adding-your-ssh-key-to-the-ssh-agent"><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=windows#adding-your-ssh-key-to-the-ssh-agent" target="_blank">[Windows] Adding your SSH key to the ssh-agent</a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-new-ssh-key-to-your-account"><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-ssh-key-to-your-account" target="_blank">Adding a new SSH key to your account</a></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

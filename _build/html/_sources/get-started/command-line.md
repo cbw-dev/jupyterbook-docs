@@ -72,7 +72,10 @@ pwd
 Typing "cd" and then hitting the `tab` key will give you the available directories you can go to from where you are, or what you have currently typed in. If there is only one option, hitting `tab` will fill in your command with that option. (This works when typing in any file location into your command line, not only using "cd"). On macOS, the terminal will give you a list if there are multiple options. On Windows, both Command Prompt and Windows Powershell will fill in potential options, and you can hit tab multiple times untill you find your desired file destination.
 ```
 
-**File Location Shorthands** When referring to file addresses, there are helpful shorthands! Here's a summary: - `.` = Current Directory - `..` = Parent Directory - `~` = Home Directory
+**File Location Shorthands** When referring to file addresses, there are helpful shorthands! Here's a summary:
+- `.` = Current Directory
+- `..` = Parent Directory
+- `~` = Home Directory
 
 Here's an example (recall, cd produces no output!):
 
