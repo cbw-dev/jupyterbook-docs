@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Setup &#8212; My sample book</title>
+    <title>Installations &#8212; My sample book</title>
   
   
   
@@ -60,12 +60,12 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'get-started/python-setup';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'get-started/install';</script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Building and Deploying" href="build-deploy.html" />
-    <link rel="prev" title="Installations" href="install.html" />
+    <link rel="next" title="New Workshop: Creation [RC] and Deployment" href="new-workshop.html" />
+    <link rel="prev" title="CBW’s Bookdown Documentation" href="../intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -171,11 +171,13 @@
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="install.html">Installations</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="build-deploy.html">Building and Deploying</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Installations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="new-workshop.html"><strong>New Workshop</strong>: Creation [RC] and Deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="old-workshop.html"><strong>Recurring Workshop</strong>: Copying [RC]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">How to Deploy Your Website</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git-setup.html">Command Line, SSH Connection &amp; Git Clone</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Editing Your Template</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Editing Your Workshop</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../edit/formatting.html">Formatting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../edit/markdown.html">Markdown Files</a></li>
@@ -259,7 +261,7 @@
       
       
       
-      <li><a href="https://github.com/cbw-dev/jupyterbook-docs/issues/new?title=Issue%20on%20page%20%2Fget-started/python-setup.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/cbw-dev/jupyterbook-docs/issues/new?title=Issue%20on%20page%20%2Fget-started/install.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -289,7 +291,7 @@
       
       
       
-      <li><a href="../_sources/get-started/python-setup.ipynb" target="_blank"
+      <li><a href="../_sources/get-started/install.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -299,7 +301,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -365,7 +367,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Setup</h1>
+    <h1>Installations</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -376,6 +378,8 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-setup">Python Setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-book-installation">Jupyter Book Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git-install">Git Install</a></li>
 </ul>
             </nav>
         </div>
@@ -387,33 +391,102 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="setup">
-<h1>Setup<a class="headerlink" href="#setup" title="Link to this heading">#</a></h1>
-<p>If you have Python, skip to <a class="reference internal" href="#"><span class="xref myst">link</span></a>.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="installations">
+<span id="id1"></span><h1>Installations<a class="headerlink" href="#installations" title="Link to this heading">#</a></h1>
+<p>If you have Python, skip to <a class="reference internal" href="#content-references-jupyter-book-setup"><span class="std std-ref">Jupyter Book Installation</span></a>.</p>
+<div class="warning admonition">
+<p class="admonition-title">Notebook Execution Incompatibility for Windows</p>
+<p>There is an incompatiablity when using <strong>Python 3.8</strong>. Click <a href="https://jupyterbook.org/en/stable/advanced/windows.html#working-on-windows" target="_blank">here</a> for more information.</p>
+</div>
 <section id="python-setup">
 <h2>Python Setup<a class="headerlink" href="#python-setup" title="Link to this heading">#</a></h2>
-<p>Install python here.</p>
-<p>Check that python was correctly installed by running the following in terminal.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">sh</span>
-python3 --version
-pip3 --version
+<p>Install Python <a href="https://www.python.org/downloads/" target="_blank">here</a>.</p>
+<p>Check that python was correctly installed by running the following in Terminal (Linux/MacOS) or Command Prompt/Powershell (Windows).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>--version
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Python 3.13.0
+<p>The output should look like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Python</span> <span class="mf">3.13.0</span>
 </pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pip 24.3.1 from /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pip (python 3.13)
-</pre></div>
-</div>
-</div>
 </div>
 <div class="warning admonition">
 <p class="admonition-title">command not found: python</p>
-<p>You might be running a very recent version of python.</p>
+<p>You might be running a very recent version of python. [ADD MORE DETAILS]</p>
+<p>Try running <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">--version</span></code> instead and you should get the above output.</p>
+</div>
+<p>Jupyter Book specifically requires pip, the package installer for Python, which will install the Jupyter Book package. Check that you have pip installed by running the following command.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>--version
+</pre></div>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">command not found: pip</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">--version</span></code> worked for you, you also need to run <code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">--version</span></code> to check your pip!</p>
+</div>
+<p>Your output should look something like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="mf">24.3.1</span> <span class="kn">from</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Frameworks</span><span class="o">/</span><span class="n">Python</span><span class="o">.</span><span class="n">framework</span><span class="o">/</span><span class="n">Versions</span><span class="o">/</span><span class="mf">3.13</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.13</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pip</span> <span class="p">(</span><span class="n">python</span> <span class="mf">3.13</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now that we have Python and pip properly installed, we can download and install Jupyter Book!</p>
+</section>
+<section id="jupyter-book-installation">
+<span id="content-references-jupyter-book-setup"></span><h2>Jupyter Book Installation<a class="headerlink" href="#jupyter-book-installation" title="Link to this heading">#</a></h2>
+<p>Run the following command (and if you needed <code class="docutils literal notranslate"><span class="pre">pip3</span></code> before, use <code class="docutils literal notranslate"><span class="pre">pip3</span></code> here):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>jupyter-book
+</pre></div>
+</div>
+<p>Check that you installed Jupyter Book correctly by running:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book<span class="w"> </span>--help
+</pre></div>
+</div>
+<p>which will help explain the <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code> command to you if it was downloaded properly!</p>
+<p>You should see:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Usage</span><span class="p">:</span> <span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="n">COMMAND</span> <span class="p">[</span><span class="n">ARGS</span><span class="p">]</span><span class="o">...</span>
+
+  <span class="n">Build</span> <span class="ow">and</span> <span class="n">manage</span> <span class="n">books</span> <span class="k">with</span> <span class="n">Jupyter</span><span class="o">.</span>
+
+<span class="n">Options</span><span class="p">:</span>
+  <span class="o">--</span><span class="n">version</span>   <span class="n">Show</span> <span class="n">the</span> <span class="n">version</span> <span class="ow">and</span> <span class="n">exit</span><span class="o">.</span>
+  <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>  <span class="n">Show</span> <span class="n">this</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span><span class="o">.</span>
+
+<span class="n">Commands</span><span class="p">:</span>
+  <span class="n">build</span>   <span class="n">Convert</span> <span class="n">your</span> <span class="n">book</span><span class="s1">&#39;s or page&#39;</span><span class="n">s</span> <span class="n">content</span> <span class="n">to</span> <span class="n">HTML</span> <span class="ow">or</span> <span class="n">a</span> <span class="n">PDF</span><span class="o">.</span>
+  <span class="n">clean</span>   <span class="n">Empty</span> <span class="n">the</span> <span class="n">_build</span> <span class="n">directory</span> <span class="k">except</span> <span class="n">jupyter_cache</span><span class="o">.</span>
+  <span class="n">config</span>  <span class="n">Inspect</span> <span class="n">your</span> <span class="n">_config</span><span class="o">.</span><span class="n">yml</span> <span class="n">file</span><span class="o">.</span>
+  <span class="n">create</span>  <span class="n">Create</span> <span class="n">a</span> <span class="n">Jupyter</span> <span class="n">Book</span> <span class="n">template</span> <span class="n">that</span> <span class="n">you</span> <span class="n">can</span> <span class="n">customize</span><span class="o">.</span>
+  <span class="n">myst</span>    <span class="n">Manipulate</span> <span class="n">MyST</span> <span class="n">markdown</span> <span class="n">files</span><span class="o">.</span>
+  <span class="n">toc</span>     <span class="n">Command</span><span class="o">-</span><span class="n">line</span> <span class="k">for</span> <span class="n">sphinx</span><span class="o">-</span><span class="n">external</span><span class="o">-</span><span class="n">toc</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>If you are having some difficulty downloading, try restarting your Terminal/Command Prompt/Windows PowerShell and ensuring your previous installations were done properly.</p>
+</section>
+<section id="git-install">
+<h2>Git Install<a class="headerlink" href="#git-install" title="Link to this heading">#</a></h2>
+<p>Git is a tool that will help us with version control when editing your workshop. Linux and macOS computers tend to have Git installed. Windows computers must install Git. However, make sure to double check if you already have Git, so that you don’t have to install it again! <strong>Check if you have Git</strong> by running this command in terminal/command prompt:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>--version
+</pre></div>
+</div>
+<p>If your output looks like <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">version</span> <span class="pre">X.X.X</span> <span class="pre">...</span></code>, you already have git! Move onto step 4!</p>
+<p>However, if your output says “Git is not recognized” or a similar statement (such as the one provided below), you do not have Git, so you must install it as well.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;git&#39;</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">recognized</span> <span class="k">as</span> <span class="n">an</span> <span class="n">internal</span> <span class="ow">or</span> <span class="n">external</span> <span class="n">command</span><span class="p">,</span>
+<span class="n">operable</span> <span class="n">program</span> <span class="ow">or</span> <span class="n">batch</span> <span class="n">file</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><a href="https://github.com/git-guides/install-git#install-git-on-mac" target="_blank"><strong>Installing Git on macOS</strong></a></p>
+<ul class="simple">
+<li><p>When you ran <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">--version</span></code>, it will have prompted you to install Git. Follow these instructions.</p></li>
+</ul>
+<p><a href="https://github.com/git-guides/install-git#install-git-on-windows" target="_blank"><strong>Installing Git on Windows</strong></a></p>
+<ul class="simple">
+<li><p>Go to the <a href="https://posit.co/download/rstudio-desktop/#:~:text=AND%20INSTALL%20R-,2%3A%20Install%20RStudio,-DOWNLOAD%20RSTUDIO%20DESKTOP" target="_blank">Git for Windows installer</a> and download Git. Then, install it with all the default settings.</p></li>
+</ul>
+<p>Click here for instructions on <a href="https://github.com/git-guides/install-git#install-git-on-windows" target="_blank"><strong>installing Git on Linux</strong></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Check that your install worked! Re-run “git –verison” and check that you get your git version! (On Windows, this may look like “git version 2.47.1.windows.1”).</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you installed Git while having a Command Prompt/Windows PowerShell window open, close this window and open a new one to run “git –version”. This acts as a refresher to Command Prompt/Windows PowerShell.</p>
 </div>
 </section>
 </section>
@@ -449,20 +522,20 @@ pip3 --version
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="install.html"
+       href="../intro.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Installations</p>
+        <p class="prev-next-title">CBW’s Bookdown Documentation</p>
       </div>
     </a>
     <a class="right-next"
-       href="build-deploy.html"
+       href="new-workshop.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Building and Deploying</p>
+        <p class="prev-next-title"><strong>New Workshop</strong>: Creation [RC] and Deployment</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -484,6 +557,8 @@ pip3 --version
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-setup">Python Setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-book-installation">Jupyter Book Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git-install">Git Install</a></li>
 </ul>
   </nav></div>
 

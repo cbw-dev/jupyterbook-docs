@@ -3,11 +3,13 @@ root: intro
 parts:
   - caption: Getting Started
     chapters:
-    - file: get-started/setup
-    - file: get-started/python-setup
-    - file: get-started/build-deploy
+    - file: get-started/install
+    - file: get-started/new-workshop
+    - file: get-started/old-workshop
+    - file: get-started/deploy
+    - file: get-started/git-setup
     
-  - caption: Editing Your Template
+  - caption: Editing Your Workshop
     chapters:
     - file: edit/formatting
     - file: edit/markdown
