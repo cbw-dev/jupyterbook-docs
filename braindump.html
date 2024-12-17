@@ -170,11 +170,13 @@
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="get-started/setup.html">Installations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="get-started/python-setup.html">Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="get-started/build-deploy.html">Building and Deploying</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get-started/install.html">Installations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get-started/new-workshop.html"><strong>New Workshop</strong>: Creation [RC] and Deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get-started/old-workshop.html"><strong>Recurring Workshop</strong>: Copying [RC]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get-started/deploy.html">How to Deploy Your Website</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get-started/git-setup.html">Command Line, SSH Connection &amp; Git Clone</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Editing Your Template</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Editing Your Workshop</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="edit/formatting.html">Formatting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="edit/markdown.html">Markdown Files</a></li>
@@ -351,7 +353,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -367,6 +371,16 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-mistakes">Common Mistakes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potential-errors-bugs">Potential Errors &amp; Bugs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#faqs">FAQs</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -378,6 +392,24 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="brain-dump">
 <h1>Brain Dump<a class="headerlink" href="#brain-dump" title="Link to this heading">#</a></h1>
+<section id="common-mistakes">
+<h2>Common Mistakes<a class="headerlink" href="#common-mistakes" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Make sure to save your files before building!</p></li>
+<li><p>Make sure you are looking at the proper output file!</p>
+<ul>
+<li><p>If you have a file you are working on open in your browser, and you are not seeing updates as you save and build, make sure you are looking at the right output file.</p></li>
+<li><p>For example, if you change the name of your file, the output file name will also change. Hence, open the file given by the Jupyter Book build output, and not necessairly what you had open in your browser before.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="potential-errors-bugs">
+<h2>Potential Errors &amp; Bugs<a class="headerlink" href="#potential-errors-bugs" title="Link to this heading">#</a></h2>
+</section>
+<section id="faqs">
+<h2>FAQs<a class="headerlink" href="#faqs" title="Link to this heading">#</a></h2>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -425,6 +457,24 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-mistakes">Common Mistakes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potential-errors-bugs">Potential Errors &amp; Bugs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#faqs">FAQs</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

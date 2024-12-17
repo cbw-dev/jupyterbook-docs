@@ -391,10 +391,14 @@
   <section class="tex2jax_ignore mathjax_ignore" id="installations">
 <span id="id1"></span><h1>Installations<a class="headerlink" href="#installations" title="Link to this heading">#</a></h1>
 <p>If you have Python, skip to <a class="reference internal" href="#content-references-jupyter-book-setup"><span class="std std-ref">Jupyter Book Installation</span></a>.</p>
+<div class="warning admonition">
+<p class="admonition-title">Notebook Execution Incompatibility for Windows</p>
+<p>There is an incompatiablity when using **Python 3.8. Click <a href="https://jupyterbook.org/en/stable/advanced/windows.html#working-on-windows" target="_blank">here</a> for more information.</p>
+</div>
 <section id="python-setup">
 <h2>Python Setup<a class="headerlink" href="#python-setup" title="Link to this heading">#</a></h2>
-<p>Install python here.</p>
-<p>Check that python was correctly installed by running the following in terminal (MacOS) or Command Prompt/Powershell (Windows).</p>
+<p>Install Python <a href="https://www.python.org/downloads/" target="_blank">here</a>.</p>
+<p>Check that python was correctly installed by running the following in Terminal (Linux/MacOS) or Command Prompt/Powershell (Windows).</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">--</span><span class="n">version</span>
 </pre></div>
 </div>
@@ -419,9 +423,14 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="mf">24.3.1</span> <span class="kn">from</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Frameworks</span><span class="o">/</span><span class="n">Python</span><span class="o">.</span><span class="n">framework</span><span class="o">/</span><span class="n">Versions</span><span class="o">/</span><span class="mf">3.13</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.13</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pip</span> <span class="p">(</span><span class="n">python</span> <span class="mf">3.13</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Now that we have Python and pip properly installed, we can download and install Jupyter Book!</p>
 </section>
 <section id="jupyter-book-installation">
 <span id="content-references-jupyter-book-setup"></span><h2>Jupyter Book Installation<a class="headerlink" href="#jupyter-book-installation" title="Link to this heading">#</a></h2>
+<p>Run the following command (and if you needed <code class="docutils literal notranslate"><span class="pre">pip3</span></code> before, use pip3 here):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">jupyter</span><span class="o">-</span><span class="n">book</span>
+</pre></div>
+</div>
 </section>
 </section>
 

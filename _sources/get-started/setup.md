@@ -3,11 +3,18 @@
 
 If you have Python, skip to [](content:references:jupyter-book-setup).
 
+`````{admonition} Notebook Execution Incompatibility for Windows
+:class: warning
+
+There is an incompatiablity when using **Python 3.8. Click <a href="https://jupyterbook.org/en/stable/advanced/windows.html#working-on-windows" target="_blank">here</a> for more information.
+
+`````
+
 ## Python Setup
 
-Install python here.
+Install Python <a href="https://www.python.org/downloads/" target="_blank">here</a>.
 
-Check that python was correctly installed by running the following in terminal (MacOS) or Command Prompt/Powershell (Windows).
+Check that python was correctly installed by running the following in Terminal (Linux/MacOS) or Command Prompt/Powershell (Windows).
 
 ```
 python --version
@@ -41,5 +48,13 @@ Your output should look something like:
 pip 24.3.1 from /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pip (python 3.13)
 ```
 
+Now that we have Python and pip properly installed, we can download and install Jupyter Book!
+
 (content:references:jupyter-book-setup)=
 ## Jupyter Book Installation
+
+Run the following command (and if you needed `pip3` before, use pip3 here):
+
+```
+pip install -U jupyter-book
+```
