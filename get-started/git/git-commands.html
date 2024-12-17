@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Git Commands Reference Sheet &#8212; My sample book</title>
+    <title>Git Commands &#8212; My sample book</title>
   
   
   
@@ -178,7 +178,7 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="git-setup.html">Git Setup</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="ssh-connection.html">Setting Up Your SSH Connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git-clone.html">Git Clone!</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Git Commands Reference Sheet</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Git Commands</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../deploy.html">How to Deploy Your Website</a></li>
@@ -187,6 +187,7 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../edit/formatting.html">Formatting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../edit/markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../edit/cheat-sheet.html">JB Commands Cheat Sheet</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Code Customizations</span></p>
 <ul class="nav bd-sidenav">
@@ -360,9 +361,7 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -373,19 +372,11 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Git Commands Reference Sheet</h1>
+    <h1>Git Commands</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-git-commands-you-will-be-using-a-lot">Non-Git Commands You Will Be Using a Lot</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -395,19 +386,44 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="git-commands-reference-sheet">
-<h1>Git Commands Reference Sheet<a class="headerlink" href="#git-commands-reference-sheet" title="Link to this heading">#</a></h1>
-<p>git pull</p>
-<p>git add -A</p>
-<p>git commit -m “clear and concise summary of actions”</p>
-<p>git push</p>
-<section id="non-git-commands-you-will-be-using-a-lot">
-<h2>Non-Git Commands You Will Be Using a Lot<a class="headerlink" href="#non-git-commands-you-will-be-using-a-lot" title="Link to this heading">#</a></h2>
-<p>jupyter-book build mybookname/</p>
-<p>jb build –all project-path</p>
-<p>ghp-import -n -p -f _build/html</p>
-<p>-&gt; consider making this an alias</p>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="git-commands">
+<span id="id1"></span><h1>Git Commands<a class="headerlink" href="#git-commands" title="Link to this heading">#</a></h1>
+<p>Now we have a bunch of files locally! We can now make local edits, and then use <strong>git commands</strong> to get and receive updates from the repository on GitHub.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Run these commands in your Terminal. You should navigate to <strong>inside</strong> your project folder (what you git cloned).</p>
+<p>You will know that you’re inside the correct folder if your <em>[pretext that appears before the command you write, forgot what it’s called]</em> begins with the name of your workshop (and not “CBWGithub”, for example).</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span>
+</pre></div>
+</div>
+<p>This updates the edits that are on the repository on GitHub (online) into your local project. You are “pulling” updates from the GitHub.</p>
+<p>For example, if someone on your workshop team made edits that are on the GitHub, you want those edits to already be made once you start making edits (or else we run into merge conflicts!). Thus, run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code>, and the edits will be made in your local folder!</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Ok, so how do we make edits and put them onto GitHub?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">You will need to use all 3 of the following commands in consecutive order!</p>
+</div>
+</details><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">-</span><span class="n">A</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">-A</span></code> “stages” <strong>A</strong>LL of your edits. This means that git is taking into account all your edits, such as new files, file edits, and deleted files.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you delete a file locally and use this command, it will also be deleted on GitHub, once you finish these 3 commands.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;clear and concise summary of actions&quot;</span>
+</pre></div>
+</div>
+<p>This command <strong>commits</strong> your changes. You can think of it as another step of “officializing” your edit. The text in quotations after <code class="docutils literal notranslate"><span class="pre">-m</span></code> is a message that is connected to this update you are about to make onto GitHub. You should put a concise and clear explanation of the edits you made!</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span>
+</pre></div>
+</div>
+<p>Finally, this confirms your changes and “pushes” them onto the GitHub. Now, everyone on your team can see your changes!</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This puts your changes onto GitHub, but this won’t update your live website - more on this in <a class="reference internal" href="../deploy.html#deploy"><span class="std std-ref">How to Deploy Your Website</span></a>.</p>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -464,22 +480,6 @@
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-git-commands-you-will-be-using-a-lot">Non-Git Commands You Will Be Using a Lot</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

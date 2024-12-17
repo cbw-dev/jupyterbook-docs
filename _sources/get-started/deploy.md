@@ -1,15 +1,52 @@
 (deploy)= 
 # How to Deploy Your Website
 
+
+## Wait, Let's Recap
+
+You currently have all the files we need to build and develop your website (all included in the basic workshop template), locally on your own laptop (since we [git cloned](git-clone)!). Since you know how to [`git pull`, `git add`, `git commit` and `git push`](git-commands), we can update our GitHub repository to hold edits to our workshop.
+
+Our template is even ready to preview! Let's look at how your website would look, using our local files.
+
+<!-- Hmmm, maybe this should be a separate section -->
+
+## How to Preview Your Website
+
+1. Navigate to the folder **containing** your project folder (the folder that you git cloned) in Terminal.
+
+    ```{admonition} Alternatively, ...
+    :class: tip, dropdown
+
+    Navigate to your project folder in Terminal. Then, run `cd ..` in terminal. Now you are in the folder **containing** your project folder (the parent folder)!
+    ```
+
+2. Run the following command:
+
+    ```{admonition} CHANGE "workshop-name" TO YOUR WORKSHOP NAME
+    :class: warning, dropdown
+    For example, if my workshop is called AUR_2024, I would run `jupyter-book build --all AUR_2024`
+    ```
+
+    ```
+    jupyter-book build --all workshop-name
+    ```
+
+    You can also use the shortened verison of "jupyter-book" and run the following command instead!
+
+    ```
+    jb build --all workshop-name
+    ```
+
+    ```{tip}
+    When you are continuously previewing your workshop, you will be continuously running this command in terminal. Recall that hitting the [↑] arrow key reenters your previous command, so it's ready for you to run!
+    ```
+
+## GitHub Pages and gh-pages
+
 ### Workshop Repo VS Workshop Website
 
-EXPLAIN GHP PAGES INSTEAD
-
-Let's recap.
-
-You currently have all the files we need to build and develop your website (all included in the basic workshop template), locally on your own laptop. You want to make changes to these files, so that you can add content for your workshop! We make these changes locally. We also "build" (convert our files into HTML pages) locally. Yet we 
-
 Now, you have made a repository that holds what GitHub needs to make our website (the basic workshop template). Essentially, the template has already been configured so that the html files that make up our website go into a folder called `docs`. We need to tell GitHub to look at the `docs` folder to find our website files and make it available to see online (a.k.a deploy it). This is what we mean when we say CBW uses GitHub pages to deploy our website.
+
 
 ```{admonition} Distinction
 GitHub (ex. https://github.com/cbw-dev/jupyterbook-template) holds your repo, which has version control for all your files! <br> The deployed website (ex. https://cbw-dev.github.io/jupyterbook-template/) has the workshop online.
