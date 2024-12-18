@@ -2,6 +2,9 @@
 
 This is the repo that hosts the CBW's Jupyter Book documentation website.
 
+**Lots of more documentation has to be done: notes from Julia_LabNotes for JupyterBook are from pages 23-30**
+
+
 DEV RULES:
 - all links to the web should create a new tab for it: use html code:
 ```
