@@ -11,7 +11,7 @@ However, it is very through and clear, so <a href="https://jupyterbook.org/" tar
 
 ## Formatting Stuff (Nia please do this)
 
-https://jupyterbook.org/en/stable/content/myst.html
+https://jupyterbook.org/en/stable/content/index.html
 
 ## Specific CBW Styling
 

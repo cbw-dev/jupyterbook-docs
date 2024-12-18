@@ -392,6 +392,7 @@
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#config-yml">1. <code class="docutils literal notranslate"><span class="pre">config.yml</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#toc-yml">2. <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-files">Other Files</a></li>
 </ul>
             </nav>
         </div>
@@ -405,13 +406,39 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="what-do-you-need-to-edit">
 <h1>What Do You Need to Edit?<a class="headerlink" href="#what-do-you-need-to-edit" title="Link to this heading">#</a></h1>
-<p>There are 2 main files that control you website:</p>
+<p>There are 2 main files that control your website:</p>
 <section id="config-yml">
 <h2>1. <code class="docutils literal notranslate"><span class="pre">config.yml</span></code><a class="headerlink" href="#config-yml" title="Link to this heading">#</a></h2>
-<p>A thorugh summary of all options in a <code class="docutils literal notranslate"><span class="pre">config.yml</span></code> is summarized <a href="https://jupyterbook.org/en/stable/customize/config.html" target="_blank">here</a>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">config.yml</span></code> file defines a lot of actions that Jupyter Book does when building your website.</p>
+<p>Before starting to customize your website, update the following things:</p>
+<ul class="simple">
+<li><p>repository &gt; url [RC]</p></li>
+<li><p>title</p></li>
+<li><p>author</p></li>
+</ul>
+<p>Feel free to add more options as you customize your website.</p>
+<p>A thorugh summary of many options in a <code class="docutils literal notranslate"><span class="pre">config.yml</span></code> is summarized <a href="https://jupyterbook.org/en/stable/customize/config.html" target="_blank">here</a>.</p>
 </section>
 <section id="toc-yml">
 <h2>2. <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code><a class="headerlink" href="#toc-yml" title="Link to this heading">#</a></h2>
+<p>TOC, or the Table of Contents, is how the primary sidebar is defined.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You may run into errors trying to change your landing page (<code class="docutils literal notranslate"><span class="pre">root:</span></code>) so that it is not called “intro.extension”!</p>
+</div>
+<p>Our sidebars are broken up into parts (using <code class="docutils literal notranslate"><span class="pre">part:</span></code>). The title of each part is determined by <code class="docutils literal notranslate"><span class="pre">caption:</span></code>. <code class="docutils literal notranslate"><span class="pre">chapters:</span></code> defines which pages follow this part, and are written as <code class="docutils literal notranslate"><span class="pre">parent_folder/file_name</span></code>. Write these addresses relative to where your project folder (since _toc.yml is usually kept there). <strong>The extension is not included</strong> and there may be errors if the extention is included. Hence, no 2 files can have the same name in the same folder, even if they have different extentions. (Ensure no files are named “intro.extension”, since this is reserved for the landing page.) Similairly, the same file can not be referenced twice across the table of contents.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Note that the indentation of _toc.yml is important and may cause your website to not build if it is incorrect.</p>
+</div>
+<p>To create a dropdown sidebar title, we use <a href="https://jupyterbook.org/en/stable/structure/configure.html" target="_blank">sections</a>.</p>
+<!-- NIA: Clarify and add more options? -->
+<p>For more customization documentation for the table of contents, visit the official Jupyter Book documentation pages: <a href="https://jupyterbook.org/en/stable/structure/toc.html" target="_blank">Structure the Table of Contents</a> and <a href="https://jupyterbook.org/en/stable/structure/configure.html" target="_blank">Configure the Table of Contents</a></p>
+</section>
+<section id="other-files">
+<h2>Other Files<a class="headerlink" href="#other-files" title="Link to this heading">#</a></h2>
+<p>Your other files can consist of .Rmd, .md and .ipynb files. <!-- and more file types? --></p>
+<!-- NIA: Please add on here -->
 </section>
 </section>
 
@@ -482,6 +509,7 @@
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#config-yml">1. <code class="docutils literal notranslate"><span class="pre">config.yml</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#toc-yml">2. <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-files">Other Files</a></li>
 </ul>
   </nav></div>
 
