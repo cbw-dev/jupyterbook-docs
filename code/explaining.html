@@ -375,7 +375,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -391,6 +393,14 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#see-julia-labnotes-pages-27-30">SEE JULIA_LABNOTES PAGES 27 - 30</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -406,7 +416,14 @@
 <p class="admonition-title">Important</p>
 <p>Ok I don’t think this is should stay in the official documentation, but this may help explain things to Nia</p>
 </div>
-<p>First, add</p>
+<section id="see-julia-labnotes-pages-27-30">
+<h2>SEE JULIA_LABNOTES PAGES 27 - 30<a class="headerlink" href="#see-julia-labnotes-pages-27-30" title="Link to this heading">#</a></h2>
+<p>Install stuff for jupytext:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="n">jupytext</span>
+<span class="n">pip3</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">pip</span>
+</pre></div>
+</div>
+<p>Add</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">sphinx</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">config</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">nb_custom_formats</span><span class="p">:</span>
@@ -417,6 +434,20 @@
 </div>
 <p>to the bottom of the _config.yml file.</p>
 <p>See here (<a class="reference external" href="https://jupyterbook.org/en/stable/file-types/jupytext.html">https://jupyterbook.org/en/stable/file-types/jupytext.html</a>) for more explanation?</p>
+<p>Code for installing a R kernel:</p>
+<ul class="simple">
+<li><p>do this in R terminal</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s2">&quot;devtools&quot;</span><span class="p">)</span>
+<span class="n">devtools</span><span class="p">::</span><span class="n">install_github</span><span class="p">(</span><span class="s2">&quot;IRkernel/IRkernel&quot;</span><span class="p">)</span>
+<span class="n">IRkernel</span><span class="p">::</span><span class="n">installspec</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Initialize the md file as a Jupytext MyST Markdown with this command</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">myst</span> <span class="n">init</span> <span class="n">mymarkdownfile</span><span class="o">.</span><span class="n">md</span> <span class="o">--</span><span class="n">kernel</span> <span class="n">kernelname</span>
+</pre></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -473,6 +504,22 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#see-julia-labnotes-pages-27-30">SEE JULIA_LABNOTES PAGES 27 - 30</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
