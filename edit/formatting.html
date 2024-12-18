@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Formatting &#8212; My sample book</title>
+    <title>Formatting Your Content &#8212; My sample book</title>
   
   
   
@@ -64,8 +64,8 @@
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Markdown Files" href="markdown.html" />
-    <link rel="prev" title="How to Deploy Your Website" href="../get-started/deploy.html" />
+    <link rel="next" title="Jupyter Book Commands Cheat Sheet" href="cheat-sheet.html" />
+    <link rel="prev" title="Intro to MyST &amp; Markdown Files" href="markdown.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -185,9 +185,11 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Editing Your Workshop</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Formatting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cheat-sheet.html">JB Commands Cheat Sheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vscode.html">Using VSCode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="important-files.html">What Do You Need to Edit?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Intro to MyST &amp; Markdown Files</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Formatting Your Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cheat-sheet.html">Jupyter Book Commands Cheat Sheet</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Code Customizations</span></p>
 <ul class="nav bd-sidenav">
@@ -365,7 +367,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -376,11 +380,26 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Formatting</h1>
+    <h1>Formatting Your Content</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formatting-stuff-nia-please-do-this">Formatting Stuff (Nia please do this)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specific-cbw-styling">Specific CBW Styling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pdfs">PDFs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#embedding-youtube-videos">Embedding YouTube Videos</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tip-markdown-not-working-not-enough-use-html">TIP: Markdown Not Working/Not Enough? Use HTML!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cheat-sheet">Cheat Sheet</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -390,8 +409,85 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="formatting">
-<h1>Formatting<a class="headerlink" href="#formatting" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="formatting-your-content">
+<h1>Formatting Your Content<a class="headerlink" href="#formatting-your-content" title="Link to this heading">#</a></h1>
+<div class="tip admonition">
+<p class="admonition-title">Preface</p>
+<p>Jupyter Book has <strong>very thorough</strong> documentation on how to use it. There are many helpful articles and guides to edit it. The good thing is that there is plenty of different forms of documentation, such as in-depth articles and summary/reference pages. Additionally, Jupyter Book has many wonderful and helpful ways to customize wesbites built with it!</p>
+<p>The only downside is that there is A LOT of documentation, which can make it slightly hard to get through and find exactly what you want.</p>
+<p>However, it is very through and clear, so <a href="https://jupyterbook.org/" target="_blank">check it out</a> for more information, or if you just want to customize more!</p>
+</div>
+<section id="formatting-stuff-nia-please-do-this">
+<h2>Formatting Stuff (Nia please do this)<a class="headerlink" href="#formatting-stuff-nia-please-do-this" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://jupyterbook.org/en/stable/content/myst.html">https://jupyterbook.org/en/stable/content/myst.html</a></p>
+</section>
+<section id="specific-cbw-styling">
+<h2>Specific CBW Styling<a class="headerlink" href="#specific-cbw-styling" title="Link to this heading">#</a></h2>
+<section id="pdfs">
+<h3>PDFs<a class="headerlink" href="#pdfs" title="Link to this heading">#</a></h3>
+<p>The way Jupyter Book hosts PDFs must be in the following way.</p>
+<ul class="simple">
+<li><p><strong>The only thing you should change is the name of the PDF. Keep the file address the same!</strong></p></li>
+<li><p>You must put the PDF into _build/_images/</p>
+<ul>
+<li><p>This is the only time you should be interacting with the _build folder</p></li>
+</ul>
+</li>
+</ul>
+<!-- NIA: This is sort of a bug, but it works -->
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;../_images/sample-pdf.pdf&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;100%&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;600px&quot;</span><span class="p">&gt;</span>
+  Your browser does not support PDFs. <span class="cm">&lt;!-- This will appear as alt text (or at least it should) --&gt;</span>
+<span class="p">&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<iframe src="../_images/sample-pdf.pdf" width="100%" height="600px">
+  Your browser does not support PDFs. <!-- This will appear as alt text (or at least it should) -->
+</iframe>
+</section>
+<section id="embedding-youtube-videos">
+<h3>Embedding YouTube Videos<a class="headerlink" href="#embedding-youtube-videos" title="Link to this heading">#</a></h3>
+<p>YouTube generates HTML code to insert YouTube videos into your pages! You should specifically edit the width and height (what you edit it to is up to you). CBW recommends that {width=”100%”}.</p>
+<p>How to get the HTML Code:</p>
+<ol class="arabic simple">
+<li><p>Go to the YouTube video you want to embed.</p></li>
+<li><p>Click “Share”, which is below the video.</p></li>
+<li><p>Click the <code class="docutils literal notranslate"><span class="pre">&lt;</span> <span class="pre">&gt;</span> <span class="pre">Embed</span></code> symbol.</p></li>
+<li><p>Select your desired options and press copy.</p></li>
+<li><p>Paste the code into your .Rmd file.</p></li>
+<li><p>Edit the width and height options.</p></li>
+<li><p>Done!</p></li>
+</ol>
+<p>An example of a YouTube video inserted into a Bookdown page is shown below!</p>
+<iframe width="100%" height="440px" src="https://www.youtube.com/embed/MwsGSgybBVU?list=PL3izGL6oi0S_e5T8qx-74WRaMR5K5U8V5" title="Infectious Disease Genomic Epidemiology 2024 | 1: Introduction to Genomic Epidemiology" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</section>
+</section>
+<section id="tip-markdown-not-working-not-enough-use-html">
+<h2>TIP: Markdown Not Working/Not Enough? Use HTML!<a class="headerlink" href="#tip-markdown-not-working-not-enough-use-html" title="Link to this heading">#</a></h2>
+<p>Since inevitably, we end up creating HTML files, we can just put HTML code into our files instead! Use HTML/CSS formatting when MyST markdown isn’t enough!</p>
+<p>Here are some examples:</p>
+<ol class="arabic">
+<li><p>Markdown has no formatting options for underlining. Hence, underline text in a .Rmd file with the following HTML syntax:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">u</span><span class="o">&gt;</span> <span class="n">underlined</span> <span class="n">text</span><span class="o">&lt;/</span><span class="n">u</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p><u> underlined text</u></p>
+</li>
+<li><p>Jupyter Book currently renders to-do lists incorrectly. Instead, you can use the following HTML code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">div</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;list-style-type: none;&quot;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">label</span><span class="o">&gt;&lt;</span><span class="nb">input</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;checkbox&quot;</span><span class="o">&gt;</span> <span class="n">check</span> <span class="n">box</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;&lt;</span><span class="n">br</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div style="list-style-type: none;">
+  <label><input type="checkbox"> check box</label><br>
+</div>
+</li>
+</ol>
+</section>
+<section id="cheat-sheet">
+<h2>Cheat Sheet<a class="headerlink" href="#cheat-sheet" title="Link to this heading">#</a></h2>
+<p>Here is a massive cheat sheet for MyST syntax provided by Jupyter Book: <a class="reference external" href="https://jupyterbook.org/en/stable/reference/cheatsheet.html">https://jupyterbook.org/en/stable/reference/cheatsheet.html</a></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -425,20 +521,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../get-started/deploy.html"
+       href="markdown.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">How to Deploy Your Website</p>
+        <p class="prev-next-title">Intro to MyST &amp; Markdown Files</p>
       </div>
     </a>
     <a class="right-next"
-       href="markdown.html"
+       href="cheat-sheet.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Markdown Files</p>
+        <p class="prev-next-title">Jupyter Book Commands Cheat Sheet</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -448,6 +544,29 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formatting-stuff-nia-please-do-this">Formatting Stuff (Nia please do this)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specific-cbw-styling">Specific CBW Styling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pdfs">PDFs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#embedding-youtube-videos">Embedding YouTube Videos</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tip-markdown-not-working-not-enough-use-html">TIP: Markdown Not Working/Not Enough? Use HTML!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cheat-sheet">Cheat Sheet</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
