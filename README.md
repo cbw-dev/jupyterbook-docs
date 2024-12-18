@@ -11,6 +11,9 @@ DEV RULES:
 BUGS:
 - 
 
+Notes:
+- when building the website for these docs, you're going to get a lot of warnings about headers, this is just because there are some non-consecutive headers, you can ignore
+
 To-Do List
 - EXPLAIN MERGE CONFLICTS
 - FIND A BETTER WAY TO SHOW TABLES

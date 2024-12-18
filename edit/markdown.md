@@ -1,4 +1,7 @@
-# Markdown Files
+<!-- NIA:
+This file is part of the template, is has some useful content so I decided to leave it here - you can edit it a bit and explain it a bit better! -->
+
+# Intro to MyST & Markdown Files
 
 Whether you write your book's content in Jupyter Notebooks (`.ipynb`) or
 in regular markdown files (`.md`), you'll write in the same flavor of markdown
@@ -31,7 +34,7 @@ Here is a note
 
 It will be rendered in a special box when you build your book.
 
-Here is an inline directive to refer to a document: {doc}`markdown-notebooks`.
+Here is an inline directive to refer to a document: {doc}`important-files`.
 
 
 ## Citations

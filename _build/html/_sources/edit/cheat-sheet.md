@@ -1,4 +1,4 @@
-## JB Commands Cheat Sheet
+## Jupyter Book Commands Cheat Sheet
 
 
 Here is a list of the commands you will be using the most!

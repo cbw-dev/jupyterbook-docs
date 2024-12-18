@@ -16,8 +16,10 @@ parts:
     
   - caption: Editing Your Workshop
     chapters:
-    - file: edit/formatting
+    - file: edit/vscode
+    - file: edit/important-files
     - file: edit/markdown
+    - file: edit/formatting
     - file: edit/cheat-sheet
 
   - caption: Code Customizations
