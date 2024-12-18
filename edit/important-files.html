@@ -191,10 +191,18 @@
 <li class="toctree-l1"><a class="reference internal" href="formatting.html">Formatting Your Content</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cheat-sheet.html">Jupyter Book Commands Cheat Sheet</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Code Customizations</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Render/Compiling Your Code</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../code-custom/render-code.html">Render Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../code-custom/markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code/explaining.html">[DEV HELP FILE]</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../code/poc-pages.html">POC Pages</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../code/poc/python-in-rmd.html">Executing Python Code in an Rmd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code/poc/r-in-rmd.html">Executing R Code in Rmd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code/poc/r-in-md.html">MyST md file that Executes R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code/poc/r-in-jupyternotebook.html">Jupyter Notebook that Executes R</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../code/template-python-example.html">Python/Markdown in a Jupyter Book Example (Template)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code/template-markdown-notebooks.html">Code in a Regular Markdown (Template) - “Notebooks with MyST Markdown”</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Brain Dump</span></p>
 <ul class="nav bd-sidenav">
@@ -390,7 +398,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#config-yml">1. <code class="docutils literal notranslate"><span class="pre">config.yml</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#config-yml">1. <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#toc-yml">2. <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-files">Other Files</a></li>
 </ul>
@@ -408,8 +416,8 @@
 <h1>What Do You Need to Edit?<a class="headerlink" href="#what-do-you-need-to-edit" title="Link to this heading">#</a></h1>
 <p>There are 2 main files that control your website:</p>
 <section id="config-yml">
-<h2>1. <code class="docutils literal notranslate"><span class="pre">config.yml</span></code><a class="headerlink" href="#config-yml" title="Link to this heading">#</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">config.yml</span></code> file defines a lot of actions that Jupyter Book does when building your website.</p>
+<h2>1. <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code><a class="headerlink" href="#config-yml" title="Link to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> file defines a lot of actions that Jupyter Book does when building your website.</p>
 <p>Before starting to customize your website, update the following things:</p>
 <ul class="simple">
 <li><p>repository &gt; url [RC]</p></li>
@@ -417,7 +425,7 @@
 <li><p>author</p></li>
 </ul>
 <p>Feel free to add more options as you customize your website.</p>
-<p>A thorugh summary of many options in a <code class="docutils literal notranslate"><span class="pre">config.yml</span></code> is summarized <a href="https://jupyterbook.org/en/stable/customize/config.html" target="_blank">here</a>.</p>
+<p>A thorugh summary of many options in a <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> is summarized <a href="https://jupyterbook.org/en/stable/customize/config.html" target="_blank">here</a>.</p>
 </section>
 <section id="toc-yml">
 <h2>2. <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code><a class="headerlink" href="#toc-yml" title="Link to this heading">#</a></h2>
@@ -433,7 +441,7 @@
 </div>
 <p>To create a dropdown sidebar title, we use <a href="https://jupyterbook.org/en/stable/structure/configure.html" target="_blank">sections</a>.</p>
 <!-- NIA: Clarify and add more options? -->
-<p>For more customization documentation for the table of contents, visit the official Jupyter Book documentation pages: <a href="https://jupyterbook.org/en/stable/structure/toc.html" target="_blank">Structure the Table of Contents</a> and <a href="https://jupyterbook.org/en/stable/structure/configure.html" target="_blank">Configure the Table of Contents</a></p>
+<p>For more customization documentation for the table of contents, visit the official Jupyter Book documentation pages: <a href="https://jupyterbook.org/en/stable/structure/toc.html" target="_blank">Structure the Table of Contents</a> and <a href="https://jupyterbook.org/en/stable/structure/configure.html" target="_blank">Configure the Table of Contents</a>.</p>
 </section>
 <section id="other-files">
 <h2>Other Files<a class="headerlink" href="#other-files" title="Link to this heading">#</a></h2>
@@ -507,7 +515,7 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#config-yml">1. <code class="docutils literal notranslate"><span class="pre">config.yml</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#config-yml">1. <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#toc-yml">2. <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-files">Other Files</a></li>
 </ul>
