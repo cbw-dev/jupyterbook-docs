@@ -22,10 +22,17 @@ parts:
     - file: edit/formatting
     - file: edit/cheat-sheet
 
-  - caption: Code Customizations
+  - caption: Render/Compiling Your Code
     chapters:
-    - file: code-custom/render-code
-    - file: code-custom/markdown-notebooks
+    - file: code/explaining
+    - file: code/poc-pages
+      sections:
+      - file: code/poc/python-in-rmd
+      - file: code/poc/r-in-rmd
+      - file: code/poc/r-in-md
+      - file: code/poc/r-in-jupyternotebook
+    - file: code/template-python-example
+    - file: code/template-markdown-notebooks
 
   - caption: Brain Dump
     chapters:

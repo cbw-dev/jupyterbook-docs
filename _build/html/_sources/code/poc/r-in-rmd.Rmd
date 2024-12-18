@@ -1,0 +1,18 @@
+---
+jupyter:
+  kernelspec:
+    display_name: R
+    language: R
+    name: ir
+---
+
+# Executing R Code in Rmd
+
+```{r echo=TRUE}
+print("Hallo I'm an RMarkdown block!")
+```
+ 
+
+should be able to run the chunk in VSCode (runs in terminal - creates an R interactive kernel)
+
+see LabNotes for more documentation on this (I think)

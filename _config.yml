@@ -33,3 +33,10 @@ html:
   favicon: img/favicon.ico
 
 exclude_patterns: [README.md] # We don't want a README.html to be built
+
+sphinx:
+  config:
+    nb_custom_formats:
+        .Rmd:
+            - jupytext.reads
+            - fmt: Rmd

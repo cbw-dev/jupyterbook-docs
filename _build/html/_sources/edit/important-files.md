@@ -2,9 +2,9 @@
 
 There are 2 main files that control your website:
 
-#### 1. `config.yml`
+#### 1. `_config.yml`
 
-The `config.yml` file defines a lot of actions that Jupyter Book does when building your website.
+The `_config.yml` file defines a lot of actions that Jupyter Book does when building your website.
 
 Before starting to customize your website, update the following things:
 
@@ -14,7 +14,7 @@ Before starting to customize your website, update the following things:
 
 Feel free to add more options as you customize your website. 
 
-A thorugh summary of many options in a `config.yml` is summarized <a href="https://jupyterbook.org/en/stable/customize/config.html" target="_blank">here</a>.
+A thorugh summary of many options in a `_config.yml` is summarized <a href="https://jupyterbook.org/en/stable/customize/config.html" target="_blank">here</a>.
 
 #### 2. `_toc.yml`
 
@@ -34,7 +34,7 @@ To create a dropdown sidebar title, we use <a href="https://jupyterbook.org/en/s
 
 <!-- NIA: Clarify and add more options? -->
 
-For more customization documentation for the table of contents, visit the official Jupyter Book documentation pages: <a href="https://jupyterbook.org/en/stable/structure/toc.html" target="_blank">Structure the Table of Contents</a> and <a href="https://jupyterbook.org/en/stable/structure/configure.html" target="_blank">Configure the Table of Contents</a>
+For more customization documentation for the table of contents, visit the official Jupyter Book documentation pages: <a href="https://jupyterbook.org/en/stable/structure/toc.html" target="_blank">Structure the Table of Contents</a> and <a href="https://jupyterbook.org/en/stable/structure/configure.html" target="_blank">Configure the Table of Contents</a>.
 
 ## Other Files
 
